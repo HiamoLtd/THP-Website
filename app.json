@@ -1,0 +1,20 @@
+{
+  "name": "Wellington Heritage Festival",
+  "description": "Wellington Heritage Festival website, built using Gatsby and Contentful.",
+  "keywords": [
+    "contentful",
+    "gatsby",
+    "static",
+    "ssg"
+  ],
+  "repository": "https://github.com/Wellington-Heritage-Festival/WHF-Website",
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}

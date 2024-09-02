@@ -1,0 +1,40 @@
+.container {
+  background-color: white;
+  padding: var(--space-2xl) var(--size-gutter);
+  overflow: clip;
+}
+
+.title {
+  color: var(--secondary);
+  font-size: var(--text-title);
+  font-weight: var(--bold);
+  line-height: var(--solid);
+  margin: 0 0 var(--space-2xl);
+  text-align: center;
+}
+
+.divider {
+  color: var(--secondary);
+  margin: 0 auto var(--space-2xl) auto;
+  width: 80%;
+}
+
+.sponsors-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+/* Above small tablet styles */
+@media (min-width: 768px) {
+  .container {
+    padding: var(--space-3xl) var(--size-gutter);
+  }
+
+  .sponsors-wrapper {
+    gap: 2rem;
+  }
+}

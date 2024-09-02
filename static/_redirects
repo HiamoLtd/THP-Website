@@ -1,0 +1,4 @@
+# === REDIRECTS USED BY NETLIFY ===
+# Manually created redirects go here
+# Others will be added by gatsby-plugin-netlify if redirects exist in the admin.
+/events/&lt;https://wellingtonheritagefestival.co.nz/events/  /events  302

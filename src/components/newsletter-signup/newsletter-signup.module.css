@@ -1,0 +1,70 @@
+.newsletter-signup {
+  background-color: #fff;
+  color: #000;
+  padding: 0;
+}
+
+.newsletter-signup .wrapper {
+  display: flex;
+  justify-content: space-between
+}
+
+.newsletter-signup .wrapper .newsletter-left {
+  text-align: left;
+  width: 50%
+}
+
+.newsletter-signup .wrapper .newsletter-left .newsletter-header {
+  font-size: 3.25em;
+  color: #05aeae
+}
+
+.newsletter-signup .wrapper .newsletter-left .newsletter-description {
+  font-weight: 500;
+  font-size: 1.6em;
+  line-height: 1.6;
+  margin: 0
+}
+
+.newsletter-signup .wrapper .newsletter-right {
+  width: 50%;
+  display: flex;
+  justify-content: end
+}
+
+.newsletter-signup .wrapper .newsletter-right #mc_embed_signup {
+  max-width: 100%
+}
+
+@media (max-width: 768px) {
+  .newsletter-signup {
+      padding:1em 0
+  }
+
+  .newsletter-signup .wrapper {
+      display: block
+  }
+
+  .newsletter-signup .wrapper .newsletter-left {
+      width: 90%;
+      margin: 0 auto
+  }
+
+  .newsletter-signup .wrapper .newsletter-left .newsletter-header {
+      font-size: 2.5em
+  }
+
+  .newsletter-signup .wrapper .newsletter-left .newsletter-description {
+      font-size: 1.25em;
+      margin: 0
+  }
+
+  .newsletter-signup .wrapper .newsletter-right {
+      width: 100%;
+      justify-content: center
+  }
+
+  .newsletter-signup .wrapper .newsletter-right form {
+      width: auto
+  }
+}

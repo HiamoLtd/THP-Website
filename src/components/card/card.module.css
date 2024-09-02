@@ -1,0 +1,90 @@
+.card {
+  background: none;
+}
+
+.image {
+  border-radius: 20px 10px 5px 5px;
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 20px 10px 5px 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  background-color: white;
+  overflow: hidden;
+  word-break: break-word;
+  height: 100%;
+
+  --card-anim-time: 0.2s;
+  transform: scale(1);
+  transition: transform var(--card-anim-time) ease-in-out, box-shadow var(--card-anim-time) ease-in-out, color var(--card-anim-time) ease-in-out;
+  -moz-transition: transform var(--card-anim-time) ease-in-out, box-shadow var(--card-anim-time) ease-in-out, color var(--card-anim-time) ease-in-out;
+  -webkit-transition: transform var(--card-anim-time) ease-in-out, box-shadow var(--card-anim-time) ease-in-out, color var(--card-anim-time) ease-in-out;
+}
+
+.body.card-link:hover,
+.body.card-link:focus {
+  transform: scale(.985);
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  color: var(--secondary);
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.body p {
+  margin: 0;
+}
+
+/* Add details tags to the top of banner images */
+.detail-pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px 0 5px 0;
+  font-weight: 600;
+  padding: 3px 25px;
+  background-color: var(--tertiary);
+  color: white;
+}
+
+/* For "Rescheduled" */
+.detail-pill--rescheduled {
+  background-color: darkorange;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px 10px 0 0;
+  text-align: center;
+}
+
+/* For "Fully Booked" and "Cancelled" */
+.detail-pill--booked {
+  background-color: darkred;
+  color: white;
+  text-align: center;
+}
+
+.detail-pill--cancelled {
+  background-color: red;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px 10px 0 0;
+  text-align: center;
+}

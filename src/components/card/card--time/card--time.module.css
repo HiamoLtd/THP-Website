@@ -1,0 +1,98 @@
+.card {
+  align-self: flex-start;
+}
+
+.body {
+  border: 1px solid lightslategray;
+}
+
+.content {
+  font-size: 0.875rem;
+}
+
+.content *:not(:last-child, hr) {
+  margin-bottom: 10px;
+}
+
+.content hr:last-child {
+  display: none;
+}
+
+.detail-pill {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 0;
+}
+
+.time {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card hr {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid lightslategrey;
+  width: calc(100% + 2rem);
+  left: -1rem;
+  position: relative;
+}
+
+.booking-required {
+  font-weight: bold;
+}
+
+/* Style phone and email links as links */
+/* TODO: more global link styles */
+.booking-info a[href^="mailto:"],
+.booking-info a[href^="ph:"] {
+  text-decoration: underline;
+}
+/* Style default links as buttons */
+.booking-info a:not([href^="mailto:"],[href^="ph:"]) {
+  text-align: center;
+  color: white;
+  background-color: var(--tertiary);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px auto 0 auto;
+}
+.booking-info a:not([href^="mailto:"],[href^="ph:"]):hover {
+  color: white;
+  background-color: darkturquoise;
+}
+
+/* TODO: Card grid to different sizes for times */
+/* TODO: Add section wrapper id for linking */
+/* TODO: Calculate duration, or just get it from CMS all the time? */
+/* TODO: Display duration */
+/* TODO: Update "Anytime during festival" to start date and end date. Will need to come from variable eventually */
+
+/* TODO: Grids of different sizes, although maybe they'll be carousels? I think grids are quicker and easier.
+Carousels would be good for the hieght of event cards though....
+Also, should events with sub events maybe not show the other events section?
+Anyway, time cards
+Make it like 6 wide on desktop, or just give cards a real small max width on desktop
+Put in some more reliable data
+Add booking links in, as buttons ideally
+Add times in a more readable format
+Add cost in a smaller format too, though I guess if it flexes its fine
+For cards adjusting height, set "align-self: start" to the cards and they'll stop growing, if we want that
+Tag in the uhhhhhh time stuff, the like "free or not" bits? Depends if it appears as a tag on event cards
+Resue the free or not btis as an event util so we can add it to a general "overallEventCost" thing
+
+Could try and do a full width to right of content block, s like the general event content goes all the way to the right, with event hsotsa nd extra details there. Doubt it'll look good tho
+*/

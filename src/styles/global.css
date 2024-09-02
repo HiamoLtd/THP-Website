@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: var(--body);
+  /*
+    Set to 0 in body, then to default in ___gatsby
+    component to stop footer being pushed up.
+  */
+  line-height: 0;
+  margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  white-space: pre-line;
+}
+
+body > #___gatsby {
+  line-height: var(--default);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--semibold);
+  line-height: var(--dense);
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -webkit-transition: 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+a.active {
+  font-weight: var(--bold);
+}
+
+tt,
+code,
+kbd {
+  background: var(--black-fade-5);
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}
+
+tt,
+code,
+kbd {
+  font-family: var(--font-monospace);
+  font-size: 90%;
+}
+
+tt,
+code {
+  background-color: var(--black-fade-5);
+  border-radius: var(--radius-sm);
+  font-weight: var(--medium);
+  padding: 0.2em 0;
+}
+
+code:before,
+code:after,
+tt:before,
+tt:after {
+  content: ' ';
+  letter-spacing: -0.2em;
+}
+
+pre,
+code {
+  font-family: var(--font-monospace);
+}
+
+/* TODO: Eventually move to another class, prob just want to include them as a component */
+.location-wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.icon--location {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin: auto 0;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23000000' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 413.099 413.099' xml:space='preserve'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'/%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cg%3E%3Cg%3E%3Cpath d='M206.549,0L206.549,0c-82.6,0-149.3,66.7-149.3,149.3c0,28.8,9.2,56.3,22,78.899l97.3,168.399c6.1,11,18.4,16.5,30,16.5 c11.601,0,23.3-5.5,30-16.5l97.3-168.299c12.9-22.601,22-49.601,22-78.901C355.849,66.8,289.149,0,206.549,0z M206.549,193.4 c-30,0-54.5-24.5-54.5-54.5s24.5-54.5,54.5-54.5s54.5,24.5,54.5,54.5C261.049,169,236.549,193.4,206.549,193.4z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* TODO: Some styles like these should be wrapping "content" classes, like in blog posts and such */
+blockquote {
+  border-left: 4px solid var(--secondary);
+  padding-left: 20px;
+}

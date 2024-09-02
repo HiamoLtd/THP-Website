@@ -1,0 +1,55 @@
+.container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: var(--space-3xl) var(--size-gutter);
+  background-color: #a6d5d6;
+}
+
+.content-wrapper {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+
+.title,
+.content h2 {
+  font-size: var(--text-title);
+  color: var(--secondary);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.container hr {
+  width: 100%;
+  margin: var(--space-lg) 0;
+  border: 1px solid var(--secondary);
+}
+
+.content {
+  color: #212121;
+  font-size: var(--text-lead);
+  margin: 0;
+}
+
+/* TODO: This applies to all links, even inline. Need to make a custom richtext render that doesn;t do this
+TODO: Maybe linking to entries when not inline should make buttons? */
+.container a:not([href^="mailto:"],[href^="ph:"]) {
+  padding: 15px 30px;
+  background: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  width: fit-content;
+  line-height: 1;
+}
+
+.container a:not([href^="mailto:"],[href^="ph:"]):hover,
+.container a:not([href^="mailto:"],[href^="ph:"]):focus {
+  background: var(--primary);
+  color: var(--secondary);
+}

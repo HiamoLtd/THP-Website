@@ -1,0 +1,60 @@
+{
+  "name": "wellington-heritage-festival-website",
+  "description": "Wellington Heritage Festival Website",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Alex Hockley, Hiamo Ltd. <alex.hockley@hiamo.nz>",
+  "bugs": {
+    "url": "https://github.com/Wellington-Heritage-Festival/WHF-Website/issues"
+  },
+  "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^15.12.1",
+    "dangerously-set-html-content": "^1.0.13",
+    "gatsby": "^5.5.0",
+    "gatsby-plugin-image": "^3.5.0",
+    "gatsby-plugin-netlify": "^5.1.1",
+    "gatsby-plugin-react-helmet": "^6.5.0",
+    "gatsby-plugin-remove-fingerprints": "^0.0.2",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-sharp": "^5.5.0",
+    "gatsby-plugin-sitemap": "^6.12.0",
+    "gatsby-source-contentful": "^8.5.0",
+    "gatsby-transformer-sharp": "^5.5.0",
+    "gh-pages": "^3.1.0",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
+    "reading-time": "^2.0.0-1"
+  },
+  "devDependencies": {
+    "contentful-import": "^8.3.2",
+    "gatsby-provision-contentful": "^0.0.5",
+    "netlify-cli": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "homepage": "https://github.com/Wellington-Heritage-Festival/WHF-Website#readme",
+  "keywords": [
+    "gatsby",
+    "contentful"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wellington-Heritage-Festival/WHF-Website.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "heroku-postbuild": "gatsby build",
+    "serve": "gatsby serve",
+    "postinstall": "node ./bin/hello.js",
+    "setup": "node ./bin/setup.js",
+    "netlify:login": "netlify login",
+    "netlify:deploy": "netlify deploy -d public -p",
+    "gatsby-provision": "gatsby-provision-contentful --contentful-data-path='./contentful/export.json' --space-id=$CONTENTFUL_SPACE_ID --management-token=$CONTENTFUL_MANAGEMENT_TOKEN"
+  }
+}
