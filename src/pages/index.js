@@ -21,7 +21,7 @@ class RootIndex extends React.Component {
         />
         {/* Image banner with text */}
         <Banner
-          type="homepage"
+          type="homepage-inline"
           title={"The Heritage Practice"}
           content={homepage.bannerContent?.bannerContent}
           image={homepage.bannerImage}
