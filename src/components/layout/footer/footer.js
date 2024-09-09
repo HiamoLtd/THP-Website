@@ -48,9 +48,9 @@ const Footer = () => (
         </div>
         <div className={`${styles.column} ${styles.socialWrapper}`}>
           <SocialLinks />
+          <span className={`${styles.legal} ${styles.attribution}`}>Built by <a href="https://hiamo.nz/">Hiamo Ltd.</a></span>
         </div>
       </div>
-      <span className={styles.attribution}>Built by <a href="https://hiamo.nz/">Hiamo Ltd.</a></span>
     </div>
   </Container>
 );

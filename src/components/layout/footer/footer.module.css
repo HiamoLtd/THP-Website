@@ -31,12 +31,12 @@
 .legal {
   font-size: var(--text-xs);
   display: block;
+  margin-bottom: 0;
 }
 
 .attribution {
-  width: 100%;
+  width: fit-content;
   display: block;
-  text-align: right;
   margin-top: 1rem;
 }
 
@@ -98,7 +98,10 @@
 
 .social-wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -111,6 +114,8 @@
   }
   
   .social-wrapper {
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: flex-end;
   }
 }
