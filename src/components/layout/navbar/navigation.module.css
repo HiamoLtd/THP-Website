@@ -13,15 +13,16 @@
 
 .nav-controls-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   height: 100%;
   width: 100%;
-  margin-left: var(--size-logo);
   flex-wrap: wrap;
-  padding: 0 var(--size-gutter);
   z-index: 1;
+  margin: 0 auto;
+  padding: 0 var(--size-gutter);
+  max-width: var(--size-max-width);
 }
 
 /* Dates banner styles */
@@ -289,5 +290,12 @@
     display: none;
     width: 0;
     height: 0;
+  }
+}
+
+/* Laptop and above styles */
+@media (min-width: 1337px) {
+  .nav-controls-wrapper {
+    padding: 0;
   }
 }
