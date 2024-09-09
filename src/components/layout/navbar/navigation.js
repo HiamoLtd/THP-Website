@@ -50,19 +50,10 @@ const Navigation = () => {
   }
 
   let navItems = [
-    { name: 'Events', path: '/events/' },
-    { name: 'Blog', path: '/blog/' },
+    { name: 'Home', path: '/' },
     { name: 'About', path: '/about/' },
-    { name: 'Donate', path: '/form/donate/' },
+    { name: 'Services', path: '/blog/' },
   ];
-
-  // If early-bird link should be shown, replace the events link or add it on
-  if (displayEarlybird) {
-    const earlyBirdLink = { name: 'Early-bird Events', path: '/early-bird/' };
-    const eventsItemIndex = navItems?.findIndex(item => item.path === '/events/');
-    if (eventsItemIndex >= 0) navItems[eventsItemIndex] = earlyBirdLink;
-    else navItems.push(earlyBirdLink);
-  }
 
   // TODO: Actually load nav items from admin
   // TODO: Admin side of nav items
