@@ -25,7 +25,7 @@ const BannerHomepageInline = ({
                 <hr />
                 {/* Homepage content is never richtext */}
                 {/* <p className={styles.content}>{content}</p> */}
-                <p className={styles.content}>A one-liner about The Heritage Practice</p>
+                <p className={styles.content}>[A one-liner about The Heritage Practice]</p>
               </>
             )}
           </Container>
