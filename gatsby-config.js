@@ -4,10 +4,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Wellington Heritage Festival",
-    description: "Experience Wellington's people, places & stories during Wellington Heritage Festival.",
-    siteUrl: "https://wellingtonheritagefestival.co.nz",
-    siteShortUrl: "wellingtonheritagefestival.co.nz",
+    title: "The Heritage Practice",
+    description: "The Heritage Practice Ltd. is here to help.",
+    siteUrl: "https://theheritagepractice.co.nz",
+    siteShortUrl: "theheritagepractice.co.nz",
     imagePath: "/images/default_meta_image.png"
   },
   plugins: [

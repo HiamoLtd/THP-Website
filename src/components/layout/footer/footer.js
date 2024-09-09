@@ -36,7 +36,7 @@ const Footer = () => (
             info@wellingtonheritageweek.co.nz
           </a>
           <span className={styles.legal}>
-            © Wellington Heritage Festival Trust &amp; Hiamo Ltd.
+            © The Heritage Practice Ltd.
             {' '}
             {getYear()}
           </span>

@@ -1,13 +1,13 @@
 {
-  "name": "Wellington Heritage Festival",
-  "description": "Wellington Heritage Festival website, built using Gatsby and Contentful.",
+  "name": "The Heritage Practice",
+  "description": "The Heritage Practice Ltd. website, built using Gatsby and Contentful.",
   "keywords": [
     "contentful",
     "gatsby",
     "static",
     "ssg"
   ],
-  "repository": "https://github.com/Wellington-Heritage-Festival/WHF-Website",
+  "repository": "https://github.com/HiamoLtd/THP-Website",
   "success_url": "/",
   "buildpacks": [
     {

@@ -1,11 +1,11 @@
 {
-  "name": "wellington-heritage-festival-website",
-  "description": "Wellington Heritage Festival Website",
+  "name": "the-heritage-practice-website",
+  "description": "The Heritage Practice Ltd. website",
   "private": true,
   "version": "0.0.1",
   "author": "Alex Hockley, Hiamo Ltd. <alex.hockley@hiamo.nz>",
   "bugs": {
-    "url": "https://github.com/Wellington-Heritage-Festival/WHF-Website/issues"
+    "url": "https://github.com/HiamoLtd/THP-Website/issues"
   },
   "dependencies": {
     "@contentful/rich-text-plain-text-renderer": "^15.12.1",
