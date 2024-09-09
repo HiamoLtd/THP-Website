@@ -59,6 +59,7 @@
   width: var(--size-logo);
   top: 10px;
   left: var(--size-gutter);
+  /* left: calc(50% - calc(var(--size-logo) / 2)); */
   z-index: 0;
   position: absolute;
   border-radius: 50%;
@@ -80,6 +81,7 @@
   padding: 6px;
   top: 10px;
   left: var(--size-gutter);
+  /* left: calc(50% - calc(var(--size-logo) / 2)); */
   z-index: 2;
 }
 
