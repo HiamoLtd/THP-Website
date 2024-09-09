@@ -40,12 +40,12 @@ const SocialLinkIcon = ({
 
 const SocialLinks = ({ linkTuples, iconWidth = '40px', iconHeight = iconWidth }) => {
   if (!linkTuples) {
-    // TODO: This is hardcoded, ideally should come from site but we are pressed for time.
+    // TODO: This is hardcoded, ideally should come from site.
     linkTuples = [
-      { icon: "facebook", url: "https://www.facebook.com/WellingtonHeritageFestival" },
-      { icon: "instagram", url: "https://www.instagram.com/wellingtonheritagefestival" },
-      { icon: "linkedin", url: "https://www.linkedin.com/company/wellington-heritage-festival" },
-      { icon: "tiktok", url: "https://www.tiktok.com/@wellingtonheritagefest" }
+      // { icon: "facebook", url: "https://www.facebook.com/" },
+      // { icon: "instagram", url: "https://www.instagram.com/" },
+      { icon: "linkedin", url: "https://www.linkedin.com/company/the-heritage-practice-aotearoa-new-zealand/" },
+      // { icon: "tiktok", url: "https://www.tiktok.com/@" }
     ];
   }
 
