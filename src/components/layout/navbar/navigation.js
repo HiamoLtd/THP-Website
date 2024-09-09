@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'gatsby';
 
-// import { SocialLinks } from '../../';
+import { SocialLinks } from '../../';
 import * as styles from './navigation.module.css';
 
 const NavHamburger = ({ navOpen, toggleOpen }) => (
@@ -52,6 +52,12 @@ const Navigation = () => {
   const navItemElems = navItems.map(item => 
     <NavItem path={item.path} name={item.name} />
   );
+  
+  const socialLinksElem = (
+    <li className={styles.navigationSocialLinks}>
+      <SocialLinks iconWidth="30px" iconHeight="30px" />
+    </li>
+  );
 
   return (
     <nav role="navigation" className={styles.container} aria-label="Main">
@@ -69,14 +75,16 @@ const Navigation = () => {
         {/* Navbar links (Non mobile) */}
         <ul className={styles.navigation}>
           {navItemElems}
+        {socialLinksElem}
         </ul>
       </div>
       {/* For mobile only, list all the navigation pages beneath the main bar instead via toggle. */}
       <ul className={`${styles.navigation} ${styles.navigationMobile} ${open && styles.navExpanded}`}>
         {navItemElems}
+        {socialLinksElem}
       </ul>
     </nav>
   );
 }
 
-export default Navigation
+export default Navigation;
