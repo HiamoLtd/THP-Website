@@ -8,7 +8,7 @@
 
 .container > a {
   line-height: 1;
-  color: var(--secondary);
+  color: var(--tertiary);
   --social-link-anim-time: 0.2s;
   transition: color var(--social-link-anim-time) ease-in-out;
   -moz-transition: color var(--social-link-anim-time) ease-in-out;
