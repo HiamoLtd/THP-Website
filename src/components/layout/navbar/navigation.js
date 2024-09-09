@@ -71,8 +71,6 @@ const Navigation = () => {
       </Link>
       {/* Navbar content to the right of the logo. */}
       <div className={styles.navControlsWrapper}>
-        {/* Dates banner */}
-        <img className={styles.datesBanner} src="/images/Hardcoded_date_banner.png" alt="Wellington Heritage Festival 2024, October 26 - November 17" />
         {/* Collapse controls */}
         <NavHamburger navOpen={open} toggleOpen={toggleOpen} />
         {/* Navbar links (Non mobile) */}
