@@ -2,12 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: var(--space-2xl) 0;
+  padding: var(--navbar-padding-y) 0;
   z-index: 5;
-  position: relative;
-  height: 20px;
+  position: fixed;
+  height: var(--navbar-inner-height);
   box-sizing: content-box;
   overflow-x: clip;
+  width: 100%;
 }
 
 .nav-controls-wrapper {
@@ -261,7 +262,7 @@
 /* Tablet styles */
 @media (min-width: 480px) {
   .container {
-    height: 50px;
+    height: var(--navbar-inner-height);
   }
 
   .logo-link,
@@ -270,7 +271,7 @@
   }
 
   .dates-banner {
-    height: 50px;
+    height: var(--navbar-inner-height);
   }
 }
 

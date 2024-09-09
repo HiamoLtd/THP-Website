@@ -73,14 +73,29 @@
   /* size */
   --size-gutter: var(--space-2xl);
   --size-logo: 75px;
-  --size-max-width: 87.5rem;
-  --size-medium-max-width: 80rem;
+  --size-max-width: 75rem;
+  --size-medium-max-width: 60rem;
+
+
+  /* -------------------------- */
+  /* COMPONENT STYLE VARIABLES */
+  /* ------------------------ */
+  /* navigation component */
+  --navbar-inner-height: 20px;
+  --navbar-padding-y: var(--space-2xl);
+  --navbar-full-height: calc(var(--navbar-padding-y) + var(--navbar-padding-y) + var(--navbar-inner-height));
 }
 
 @media (min-width: 480px) {
   :root {
     --size-gutter: var(--space-3xl);
     --size-logo: 120px;
+
+    /* -------------------------- */
+    /* COMPONENT STYLE VARIABLES */
+    /* ------------------------ */
+    /* navigation component */
+    --navbar-inner-height: 50px;
   }
 }
 
