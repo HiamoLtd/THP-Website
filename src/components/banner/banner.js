@@ -2,6 +2,7 @@ import React from 'react';
 
 import BannerHeader from './banner--header';
 import BannerHomepage from './banner--homepage';
+import BannerHomepageInline from './banner--homepage-inline';
 import BannerCTA from './banner--cta';
 
 // TODO: Could really use prop spreading here
@@ -16,6 +17,8 @@ const Banner = ({
   switch (type) {
     case 'homepage':
       return <BannerHomepage title={title} content={content} image={image} classes={classes} />;
+    case 'homepage-inline':
+      return <BannerHomepageInline title={title} content={content} image={image} classes={classes} />;
     case 'cta':
       return <BannerCTA title={title} content={content} classes={classes} usesRichtext={usesRichtext} />;
     default:
