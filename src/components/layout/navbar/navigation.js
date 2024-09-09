@@ -41,14 +41,6 @@ const Navigation = () => {
     setOpen(open ? false : true);
   }
 
-  let displayEarlybird = false;
-  // TODO: Do this via a flag. If events are released, no need to update early bird links
-  const updateEarlyBirdLinks = false;
-  const currPath = useLocation().pathname;
-  if (updateEarlyBirdLinks && (currPath === '/early-bird/' || currPath.startsWith('/event/'))) {
-    displayEarlybird = true
-  }
-
   let navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about/' },
