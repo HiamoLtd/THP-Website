@@ -12,11 +12,30 @@ const TEMPPurposeContent = () => (
   </>
 );
 
+const TEMPWhoWeAreContent = () => (
+  <>
+    <p>[Meet our team, and discover how we make your heritage journey easy.]</p>
+    <a href="/about">About Us</a>
+  </>
+);
+
 const TEMPPurposeStatement = () => {
   const content = TEMPPurposeContent();
   return (
     <Banner
       type="cta"
+      content={content}
+      usesRichtext={false}
+    />
+  );
+};
+
+const TEMPWhoWeAre = () => {
+  const content = TEMPWhoWeAreContent();
+  return (
+    <Banner
+      type="columns"
+      title="Who We Are"
       content={content}
       usesRichtext={false}
     />
@@ -48,25 +67,7 @@ class RootIndex extends React.Component {
         <TEMPPurposeStatement />
         {/* THP - Who We Are Section */}
           {/* TODO: Brief into text, photo, link to about page */}
-        {homepage.ctaContent && (
-          <Banner
-            type="cta"
-            title="Who We Are"
-            content={homepage.ctaContent}
-            usesRichtext={true}
-          />
-        )}
-        
-        {/* THP - More About Us Section */}
-        {/* TODO: Same section type as above, but with different content somehow */}
-        {homepage.ctaContent && (
-          <Banner
-            type="cta"
-            title="More About Us"
-            content={homepage.ctaContent}
-            usesRichtext={true}
-          />
-        )}
+        <TEMPWhoWeAre />
         
         {/* THP - Services We Provide Section */}
         {/* TODO: Three sections, title, description, link for each one? Or just link to services page? */}
