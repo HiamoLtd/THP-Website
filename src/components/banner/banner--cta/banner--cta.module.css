@@ -3,18 +3,18 @@
   height: auto;
   position: relative;
   padding: var(--space-3xl) var(--size-gutter);
-  background-color: #a6d5d6;
+  background-color: var(--secondary);
 }
 
 .content-wrapper {
-  color: var(--secondary);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
 .title,
 .content h2 {
   font-size: var(--text-title);
-  color: var(--secondary);
+  color: var(--primary);
   font-weight: 700;
   margin: 0;
   line-height: 1.1;
@@ -23,7 +23,7 @@
 .container hr {
   width: 100%;
   margin: var(--space-lg) 0;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--primary);
 }
 
 .content {
