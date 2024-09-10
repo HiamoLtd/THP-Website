@@ -23,8 +23,10 @@ const Container = ({
       className={classes}
     >
       <div style={{
+          width: '100%',
           maxWidth: maxWidth,
-          margin: '0 auto'
+          margin: '0 auto',
+          display: 'inherit'
         }}>
       {children}
       </div>
