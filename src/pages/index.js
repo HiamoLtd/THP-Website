@@ -5,6 +5,24 @@ import get from 'lodash/get';
 import { Seo } from '../components/shared';
 import { Layout, Banner } from '../components';
 
+const TEMPPurposeContent = () => (
+  <>
+    <p>[The Heritage Practice is a Wellington-based consultancy that helps protect and manage Aotearoa's heritage places. We work with building owners, architects, and councils to ensure heritage sites are cared for and adapted in ways that respect their history.</p>
+    <p>Our services include writing conservation plans, supporting resource consents, and giving expert advice on heritage projects, helping to protect the taonga of our past for future generations.]</p>
+  </>
+);
+
+const TEMPPurposeStatement = () => {
+  const content = TEMPPurposeContent();
+  return (
+    <Banner
+      type="cta"
+      content={content}
+      usesRichtext={false}
+    />
+  );
+};
+
 class RootIndex extends React.Component {
   render() {
     const homepage = get(this, 'props.data.contentfulHomepage');
@@ -27,14 +45,7 @@ class RootIndex extends React.Component {
           image={homepage.bannerImage}
         />
         {/* THP - Purpose Statement Section */}
-        {homepage.ctaContent && (
-          <Banner
-            type="cta"
-            title="The Heritage Practice"
-            content={homepage.ctaContent}
-            usesRichtext={true}
-          />
-        )}
+        <TEMPPurposeStatement />
         {/* THP - Who We Are Section */}
           {/* TODO: Brief into text, photo, link to about page */}
         {homepage.ctaContent && (
