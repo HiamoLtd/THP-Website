@@ -7,15 +7,16 @@ import { Layout, Hero, CardGrid } from '../components';
 
 class EventsLanding extends React.Component {
   render() {
-    const events = get(this, 'props.data.allContentfulEvent.nodes');
+    // const events = get(this, 'props.data.allContentfulEvent.nodes');
 
-    return (
-      <Layout location={this.props.location}>
-        <Seo title="Working Events" robots={false} />
-        <Hero title="Working Events" variant="headline" />
-        <CardGrid items={events} type="event" padding="var(--size-gutter)" />
-      </Layout>
-    );
+    // return (
+    //   <Layout location={this.props.location}>
+    //     <Seo title="Working Events" robots={false} />
+    //     <Hero title="Working Events" variant="headline" />
+    //     <CardGrid items={events} type="event" padding="var(--size-gutter)" />
+    //   </Layout>
+    // );
+    return (<></>)
   }
 }
 
