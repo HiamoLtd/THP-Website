@@ -4,6 +4,7 @@ import CardEvent from './card--event';
 import CardTime from './card--time';
 import CardHost from './card--host';
 import CardBlog from './card--blog';
+import CardPage from './card--page';
 
 import * as styles from './card.module.css';
 
@@ -36,10 +37,11 @@ const Card = ({ item, type, size }) => {
     case 'host':
     case 'hosts':
       return <CardHost host={item} classes={classes} />;
-    // case 'form':
-    //   return <CardForm form={item} classes={classes} />;
-    default:
+    case 'blog':
+    case 'blogs':
       return <CardBlog post={item} classes={classes} />;
+    default:
+      return <CardPage page={item} classes={classes} />;
   }
 };
 
