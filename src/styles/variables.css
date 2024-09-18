@@ -8,15 +8,17 @@
     'Courier New', monospace;
   --font-serif: 'Times New Roman', Times, serif;
 
-  /* palette */
+  /* basic palette */
   --white: #fff;
   --black: #000;
   --black-fade-5: rgba(0, 0, 0, 0.05);
 
-  /* HIAMO CODE: BRAND COLOURS */
-  --primary: #05aeae;
-  --secondary: #103636;
-  --tertiary: teal;
+  /* Brand Colours */
+  --primary: #e94724;
+  --secondary: #fae5d4;
+  --tertiary: #100f0d;
+  --dark: #100f0d;
+  --light: #fae5d4;
 
   /* radii */
   --radius-sm: 4px;
@@ -62,7 +64,7 @@
 
   /* text */
   /* color */
-  --text-color: var(--black);
+  --text-color: var(--dark);
   /* size */
   --text-lead: var(--text-lg);
   --text-prose: var(--text-md);
