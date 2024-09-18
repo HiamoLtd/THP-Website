@@ -51,6 +51,7 @@ const CardGrid = ({
   overflow,
   acceptTags,
   blockTags,
+  maxWidth = "none",
   hideChildren = false
 }) => {
   if (!items) return null;
@@ -70,7 +71,7 @@ const CardGrid = ({
   return (
     <Container
       bgColor={bgColor}
-      maxWidth="none"
+      maxWidth={maxWidth}
       padding={padding}
       overflow={overflow}
     >
