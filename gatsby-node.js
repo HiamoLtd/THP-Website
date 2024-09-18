@@ -176,18 +176,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // --------------------------
   // EVENTS TEMPLATES & LOADING
   // --------------------------
-  const eventPageTemplate = path.resolve('./src/templates/events/event.js');
+  // const eventPageTemplate = path.resolve('./src/templates/events/event.js');
 
-  console.log('Gathering event pages...');
-  const events = await asyncGetContentfulPages(graphql, reporter, 'allContentfulEvent');
+  // console.log('Gathering event pages...');
+  // const events = await asyncGetContentfulPages(graphql, reporter, 'allContentfulEvent');
 
-  if (events === null) console.log('Error gathering events. Skipping events creation.');
-  else if (events.length === 0) console.log('No events found.');
-  else if (events.length > 0) {
-    console.log(`Creating ${events?.length} event pages...`);
-    createPagesFromList(actions, events, '/event', eventPageTemplate, false);
-    console.log(`Event pages complete.`);
-  }
+  // if (events === null) console.log('Error gathering events. Skipping events creation.');
+  // else if (events.length === 0) console.log('No events found.');
+  // else if (events.length > 0) {
+  //   console.log(`Creating ${events?.length} event pages...`);
+  //   createPagesFromList(actions, events, '/event', eventPageTemplate, false);
+  //   console.log(`Event pages complete.`);
+  // }
 
 
   // --------------------------------
