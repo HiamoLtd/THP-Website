@@ -106,9 +106,11 @@ class RootIndex extends React.Component {
         
         {/* THP - Services We Provide Section */}
         {/* TODO: Three sections, title, description, link for each one? Or just link to services page? */}
+        {/* TODO: Services page? */}
         <TEMPServices />
 
         {/* THP - Contact Section */}
+        {/* TODO: Do we want this? */}
         {homepage.contactContent && (
           <Banner
             type="cta"
@@ -118,6 +120,8 @@ class RootIndex extends React.Component {
             usesRichtext={true}
           />
         )}
+
+        {/* TODO: "What we're involved with"? */}
 
         {/* Newsletter signup */}
         {/* <NewsletterSignup /> */}
