@@ -15,7 +15,8 @@ const BannerHomepageInline = ({
     <div className={styles.imageWrapper}>
       <div
         className={styles.image}
-        style={{backgroundImage: `url(${image?.url})`}}
+        // style={{backgroundImage: `url(${image?.url})`}}
+        style={{backgroundImage: `url(/images/home_bg.jpg`}}
       >
         <Container bgColor="transparent" classes={styles.contentOuterWrapper} padding="0 var(--size-gutter)">
           <Container bgColor="var(--secondary)" classes={styles.contentInnerWrapper}>
