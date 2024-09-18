@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import get from 'lodash/get';
 
 import { Seo } from '../components/shared';
-import { Layout, Banner } from '../components';
+import { Layout, Banner, CardGrid } from '../components';
 
 const TEMPPurposeContent = () => (
   <>
@@ -42,6 +42,41 @@ const TEMPWhoWeAre = () => {
   );
 };
 
+const TEMPServices = () => {
+  const serviceExampleItems = [
+    {
+      title: "[Service One]",
+      intro: "[This is an intro for service one.]",
+      imgName: "service_1.jpg"
+    },
+    {
+      title: "[Service Two]",
+      intro: "[This is an intro for service two.]",
+      imgName: "service_2.jpg"
+    },
+    {
+      title: "[Service Three]",
+      intro: "[This is an intro for service three.]",
+      imgName: "service_3.jpg"
+    },
+  ];
+  return (
+    <>
+      <Banner
+        type="cta"
+        title="What We Do"
+      />
+      <CardGrid
+        items={serviceExampleItems}
+        type="page"
+        padding="0 var(--size-gutter)"
+        maxWidth="var(--size-max-width)"
+        bgColor="var(--secondary)"
+      />
+    </>
+  );
+};
+
 class RootIndex extends React.Component {
   render() {
     const homepage = get(this, 'props.data.contentfulHomepage');
@@ -71,14 +106,7 @@ class RootIndex extends React.Component {
         
         {/* THP - Services We Provide Section */}
         {/* TODO: Three sections, title, description, link for each one? Or just link to services page? */}
-        {homepage.ctaContent && (
-          <Banner
-            type="cta"
-            title="What We Do"
-            content={homepage.ctaContent}
-            usesRichtext={true}
-          />
-        )}
+        <TEMPServices />
 
         {/* THP - Contact Section */}
         {homepage.contactContent && (
