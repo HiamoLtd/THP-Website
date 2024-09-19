@@ -171,55 +171,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulEvent(filter: { listed: { eq: true } }, sort: {updatedAt: DESC}) {
-      nodes {
-        id
-        title
-        bannerImg {
-          img {
-            gatsbyImage(
-              layout: FULL_WIDTH
-              placeholder: DOMINANT_COLOR
-              width: 480
-              height: 270
-            )
-            url
-          }
-          alt
-        }
-        duration
-        detailTags
-        location
-        regions
-        shortTitle
-        slug
-        types
-        times {
-          bookingRequired
-          bookingInfo {
-            raw
-          }
-          cost
-          costOption
-          endDate
-          fullFestivalDuration
-          startDate
-        }
-        childEvents {
-          duration
-          times {
-            bookingRequired
-            costOption
-            endDate
-            fullFestivalDuration
-            status
-            startDate
-          }
-        }
-        intro {
-          raw
-        }
-      }
-    }
   }
 `
