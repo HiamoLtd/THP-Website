@@ -31,17 +31,19 @@ const Hero = ({
   const statusLevelClass = status && getStatusClass(status);
 
   return (
-    <div className={`${styles.hero} ${variant && styles[variant]}`}>
-      {altImage
-        ? <GatsbyImage className={styles.image} alt={altImage.alt} image={altImage.img?.gatsbyImage} />
-        : image && <GatsbyImage className={styles.image} alt={title} image={image} />
-      }
-      <div className={styles.details}>
-        {status && (<span className={`${styles.detailPill} ${statusLevelClass}`}>{status}</span>)}
-        <h1 className={styles.title}>{title}</h1>
-        {content && (
-          <div className={styles.content}>{usesRichtext ? renderRichText(content) : content}</div>
-        )}
+    <div className={styles.container}>
+      <div className={`${styles.hero} ${variant && styles[variant]}`}>
+        {altImage
+          ? <GatsbyImage className={styles.image} alt={altImage.alt} image={altImage.img?.gatsbyImage} />
+          : image && <GatsbyImage className={styles.image} alt={title} image={image} />
+        }
+        <div className={styles.details}>
+          {status && (<span className={`${styles.detailPill} ${statusLevelClass}`}>{status}</span>)}
+          <h1 className={styles.title}>{title}</h1>
+          {content && (
+            <div className={styles.content}>{usesRichtext ? renderRichText(content) : content}</div>
+          )}
+        </div>
       </div>
     </div>
   );

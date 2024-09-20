@@ -1,3 +1,7 @@
+.container {
+  padding-top: var(--navbar-full-height);
+}
+
 .hero {
   align-items: flex-end;
   display: flex;
