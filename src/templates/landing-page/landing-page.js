@@ -28,7 +28,7 @@ class LandingPageTemplate extends React.Component {
     } else if (type === 'Blog Posts') {
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulBlogPost.nodes')}
-                          type="blog posts"
+                          type="blog"
                           padding="var(--size-gutter)"
                           layout="large"
                         />;
