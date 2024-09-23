@@ -193,18 +193,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // --------------------------------
   // LANDING PAGE TEMPLATES & LOADING
   // --------------------------------
-  // const landingPageTemplate = path.resolve('./src/templates/landing-page/landing-page.js');
+  const landingPageTemplate = path.resolve('./src/templates/landing-page/landing-page.js');
 
-  // console.log('Gathering landing pages...');
-  // const landingPages = await asyncGetContentfulPages(graphql, reporter, 'allContentfulLandingPage');
+  console.log('Gathering landing pages...');
+  const landingPages = await asyncGetContentfulPages(graphql, reporter, 'allContentfulLandingPage');
 
-  // if (landingPages === null) console.log('Error gathering landing pages. Skipping landing page creation.');
-  // else if (landingPages.length === 0) console.log('No landing pages found.');
-  // else if (landingPages.length > 0) {
-  //   console.log(`Creating ${landingPages?.length} landing pages...`);
-  //   createPagesFromList(actions, landingPages, null, landingPageTemplate, false);
-  //   console.log(`Landing pages complete.`);
-  // }
+  if (landingPages === null) console.log('Error gathering landing pages. Skipping landing page creation.');
+  else if (landingPages.length === 0) console.log('No landing pages found.');
+  else if (landingPages.length > 0) {
+    console.log(`Creating ${landingPages?.length} landing pages...`);
+    createPagesFromList(actions, landingPages, null, landingPageTemplate, false);
+    console.log(`Landing pages complete.`);
+  }
 
 
   // ------------------------------
