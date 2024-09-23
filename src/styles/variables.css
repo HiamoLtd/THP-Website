@@ -64,7 +64,8 @@
 
   /* text */
   /* color */
-  --text-color: var(--dark);
+  --text-dark: var(--dark);
+  --text-light: var(--light);
   /* size */
   --text-lead: var(--text-lg);
   --text-prose: var(--text-md);
