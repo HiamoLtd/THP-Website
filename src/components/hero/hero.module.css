@@ -1,5 +1,6 @@
 .container {
   padding-top: var(--navbar-full-height);
+  background-color: var(--primary);
 }
 
 .hero {
@@ -133,14 +134,14 @@
   font-size: var(--text-2xl);
   padding: 3px 25px;
   background-color: var(--tertiary);
-  color: white;
+  color: var(--text-light);
   width: fit-content;
 }
 
 /* For "Rescheduled" */
 .detail-pill--rescheduled {
   background-color: darkorange;
-  color: white;
+  color: var(--text-light);
   text-align: center;
   width: 100%;
 }
@@ -148,7 +149,7 @@
 /* For "Fully Booked" */
 .detail-pill--booked {
   background-color: darkred;
-  color: white;
+  color: var(--text-light);
 }
 
 /* For "Cancelled" */
