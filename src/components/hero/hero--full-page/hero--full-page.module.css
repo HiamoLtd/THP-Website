@@ -29,14 +29,15 @@
   left: 0;
   top: 0;
   padding: 0;
+  position: relative;
   overflow: clip;
   word-wrap: break-word;
   left: 0;
   max-width: 40rem;
-  padding: var(--space-xl) var(--size-gutter);
+  width: auto;
+  padding: var(--space-2xl) var(--size-gutter) 0;
   overflow: visible;
   word-wrap: normal;
-  width: auto;
   position: relative;
 }
 
@@ -57,6 +58,9 @@
 @media (min-width: 480px) {
   .details {
     width: 85%;
+  }
+
+  .details {
     padding: var(--space-3xl) var(--size-gutter) 0;
   }
 }
@@ -64,6 +68,9 @@
 @media (min-width: 768px) {
   .hero {
     padding-top: var(--size-gutter);
+  }
+
+  .details {
     max-width: 44rem;
     padding: var(--space-3xl) var(--size-gutter) 0;
   }
@@ -80,7 +87,6 @@
     padding: var(--space-3xl) var(--size-gutter) 0 0;
   }
 }
-
 
 .headline .details {
   background: none;
