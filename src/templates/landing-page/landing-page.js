@@ -66,6 +66,21 @@ class LandingPageTemplate extends React.Component {
 
 export default LandingPageTemplate;
 
+/*
+FOR EVENTS:
+        bannerImg {
+          img {
+            gatsbyImage(
+              layout: FULL_WIDTH
+              placeholder: DOMINANT_COLOR
+              width: 480
+              height: 270
+            )
+          }
+          alt
+        }
+*/
+
 export const pageQuery = graphql`
   query LandingPageQuery($slug: String!) {
     contentfulLandingPage(slug: { eq: $slug }) {
@@ -108,17 +123,6 @@ export const pageQuery = graphql`
           }
         }
         title
-        bannerImg {
-          img {
-            gatsbyImage(
-              layout: FULL_WIDTH
-              placeholder: DOMINANT_COLOR
-              width: 480
-              height: 270
-            )
-          }
-          alt
-        }
         duration
         detailTags
         status
