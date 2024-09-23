@@ -1,0 +1,172 @@
+.container {
+  padding-top: var(--navbar-full-height);
+  background-color: var(--primary);
+}
+
+.hero {
+  align-items: flex-end;
+  display: flex;
+  margin: 0 auto;
+  max-width: var(--size-medium-max-width);
+  min-height: 200px;
+  padding: var(--space-3xl) 0 var(--size-gutter);
+  position: relative;
+  color: white;
+  --details-offset: 20px;
+  flex-direction: column;
+  width: 95%;
+}
+
+.image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 0 1rem 0;
+  height: auto;
+  max-height: 560px;
+}
+
+.details {
+  left: 0;
+  top: 0;
+  padding: 0;
+  overflow: clip;
+  word-wrap: break-word;
+  left: 0;
+  max-width: 40rem;
+  padding: var(--space-xl) var(--size-gutter);
+  overflow: visible;
+  word-wrap: normal;
+  width: auto;
+  position: relative;
+}
+
+.title {
+  letter-spacing: -0.012em;
+  font-size: var(--text-title);
+  font-weight: var(--extrabold);
+  line-height: var(--solid);
+  margin: 0;
+}
+
+.content {
+  font-size: var(--text-lead);
+  font-weight: var(--semibold);
+  margin: 0;
+}
+
+@media (min-width: 480px) {
+  .details {
+    width: 85%;
+    padding: var(--space-3xl) var(--size-gutter) 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: var(--size-gutter);
+    max-width: 44rem;
+    padding: var(--space-3xl) var(--size-gutter) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image {
+    margin-left: auto;
+    width: 80%;
+  }
+
+  .details {
+    left: var(--size-gutter);
+    padding: var(--space-3xl) var(--size-gutter) 0 0;
+  }
+}
+
+
+.headline .details {
+  background: none;
+}
+
+/* TODO: This shouldn't be here, ideally should be a component with some variant styles. */
+.detail-pill {
+  position: relative;
+  display: block;
+  top: -1rem;
+  left: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: var(--text-2xl);
+  padding: 3px 25px;
+  background-color: var(--tertiary);
+  color: var(--text-light);
+  width: fit-content;
+}
+
+/* For "Rescheduled" */
+.detail-pill--rescheduled {
+  background-color: darkorange;
+  color: var(--text-light);
+  text-align: center;
+  width: 100%;
+}
+
+/* For "Fully Booked" */
+.detail-pill--booked {
+  background-color: darkred;
+  color: var(--text-light);
+}
+
+/* For "Cancelled" */
+.detail-pill--cancelled {
+  background-color: red;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .image {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .details {
+    padding: var(--space-2xl) 0 var(--space-2xl) var(--size-gutter);
+    width: 45%;
+    left: 0;
+    bottom: var(--details-offset);
+  }
+
+  .image {
+    height: auto;
+    width: 55%;
+    max-height: 560px;
+    margin: 0 0 0 auto;
+  }
+
+  .detail-pill {
+    top: calc(-1 * var(--space-2xl));
+    left: calc(-1 * var(--space-2xl));
+  }
+}
+
+@media (min-width: 1337px) {
+  .hero {
+    width: 100%;
+  }
+
+  .details {
+    padding: var(--space-2xl) 0 var(--space-2xl) var(--size-gutter);
+    margin-left: var(--size-gutter);
+  }
+
+  .image {
+    right: var(--space-xl);
+    margin: 0;
+  }
+}
