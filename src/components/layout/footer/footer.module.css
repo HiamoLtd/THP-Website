@@ -1,5 +1,5 @@
 .container {
-  border-top: 1px solid var(--secondary);
+  border-top: 1px solid var(--primary);
   font-size: var(--text-sm);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) 0;
