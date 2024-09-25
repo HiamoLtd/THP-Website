@@ -19,7 +19,7 @@ const Hero = ({
     case 'full-page':
       return <HeroFullPage title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} />;
     default:
-      return <HeroFlex title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} />;
+      return <HeroFullPage title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} />;
   }
 };
 
