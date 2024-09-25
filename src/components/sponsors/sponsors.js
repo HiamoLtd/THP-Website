@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import * as styles from './sponsors.module.css';
 
+import Container from '../shared/container';
 import Sponsor from './sponsor';
 
 
@@ -32,16 +33,18 @@ const Sponsors = () => {
   if (sponsor_list?.size <= 0) return;
 
   return (
-    <div className={styles.container} id="sponsors">
-      <h3 className={styles.title}>Our Sponsors</h3>
-      <hr className={styles.divider} />
+    <Container>
+      <div className={styles.container} id="sponsors">
+        <h3 className={styles.title}>Our Sponsors</h3>
+        <hr className={styles.divider} />
 
-      <div className={styles.sponsorsWrapper}>
-        {sponsor_list?.map((sponsor) => (
-          <Sponsor name={sponsor.name} website={sponsor.website} image={sponsor.image} />
-        ))}
+        <div className={styles.sponsorsWrapper}>
+          {sponsor_list?.map((sponsor) => (
+            <Sponsor name={sponsor.name} website={sponsor.website} image={sponsor.image} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
