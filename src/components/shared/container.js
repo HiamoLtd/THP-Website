@@ -3,10 +3,11 @@ import React from 'react'
 const Container = ({
   children,
   as = 'div',
-  bgColor = '#FFF',
+  bgColor = 'var(--white)',
   maxWidth = 'var(--size-max-width)',
   padding = 'var(--space-2xl) var(--size-gutter)',
   overflow = 'hidden',
+  position = 'relative',
   classes = ''
 }) => {
   const Tag = as;
@@ -18,7 +19,8 @@ const Container = ({
         width: '100%',
         overflow: overflow,
         padding: padding,
-        backgroundColor: bgColor
+        backgroundColor: bgColor,
+        position: position
       }}
       className={classes}
     >
