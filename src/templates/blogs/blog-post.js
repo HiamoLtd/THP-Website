@@ -37,6 +37,8 @@ class BlogPostTemplate extends React.Component {
 
     const plainTextIntro = post.intro?.raw && documentToPlainTextString(JSON.parse(post.intro.raw));
     const plainTextContent = post.content?.raw && documentToPlainTextString(JSON.parse(post.content.raw));
+    // Styles the article and hero. Can be "full-page" or "flex"
+    const heroVariant = 'full-page';
 
     const options = {
       renderNode: {
@@ -66,11 +68,11 @@ class BlogPostTemplate extends React.Component {
         <Hero
           altImage={post.bannerImg}
           title={post.title}
-          variant="banner"
+          variant={heroVariant}
           usesRichtext={false}
           content={metaDetails(post, plainTextContent)}
         />
-        <div className={styles.container}>
+        <div className={`${styles.container} ${heroVariant === 'full-page' && styles.useFullPageHero}`}>
           <div className={styles.article}>
             <div className={styles.body}>
               {/* Image attribution */}

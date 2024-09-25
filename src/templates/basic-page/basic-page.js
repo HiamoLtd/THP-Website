@@ -19,6 +19,8 @@ class BasicPageTemplate extends React.Component {
 
     const plainTextIntro = page.intro?.raw && documentToPlainTextString(JSON.parse(page.intro.raw));
     const plainTextContent = page.content?.raw && documentToPlainTextString(JSON.parse(page.content.raw));
+    // Styles the article and hero. Can be "full-page" or "flex"
+    const heroVariant = 'full-page';
 
     const options = {
       renderNode: {
@@ -52,10 +54,10 @@ class BasicPageTemplate extends React.Component {
         <Hero
           altImage={page.bannerImg}
           title={page.title}
-          variant="banner"
+          variant={heroVariant}
           usesRichtext={false}
         />
-        <div className={styles.container}>
+        <div className={`${styles.container} ${heroVariant === 'full-page' && styles.useFullPageHero}`}>
           <div className={styles.article}>
             <div className={styles.body}>
               {/* Image attribution */}

@@ -13,8 +13,15 @@
 }
 
 .container {
-  background-color: white;
+  background-color: var(--white);
   overflow: clip;
+}
+
+.container.use-full-page-hero {
+  overflow: clip;
+  z-index: 1;
+  position: relative;
+  width: 90%;
 }
 
 .article {
