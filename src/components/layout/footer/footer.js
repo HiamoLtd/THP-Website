@@ -14,9 +14,9 @@ const Footer = () => (
     <div className={styles.container}>
       <div className={styles.row}>
         <div className={`${styles.column} ${styles.textColumn}`}>
-          {/* <p>
-            This site is still being built. You may notice changes coming through over the next few weeks.
-          </p> */}
+          <Link to="/" className={styles.basicLink}>
+            Home
+          </Link>
           <Link to="/about" className={styles.basicLink}>
             About Us
           </Link>
