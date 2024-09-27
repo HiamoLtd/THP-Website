@@ -107,7 +107,7 @@
 @media (min-width: 768px) {
   :root {
     --text-lead: var(--text-2xl);
-    --text-title: var(--text-4xl);
+    --text-title: var(--text-5xl);
     --text-prose-tracking: -0.014em;
     --text-prose: var(--text-lg);
   }
