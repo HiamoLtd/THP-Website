@@ -17,24 +17,15 @@ const Footer = () => (
           {/* <p>
             This site is still being built. You may notice changes coming through over the next few weeks.
           </p> */}
-          <Link to="/events" className={styles.basicLink}>
-            Events
-          </Link>
-          <Link to="/form/donate/" className={styles.basicLink}>
-            Donate or Sponsor
-          </Link>
-          <Link to="/blog" className={styles.basicLink}>
-            Blog
-          </Link>
-          {/* <Link to="/clustering" className={styles.basicLink}>
-            Event Clustering
-          </Link> */}
           <Link to="/about" className={styles.basicLink}>
-            About
+            About Us
           </Link>
-          <a className={styles.contact} href="mailto:info@wellingtonheritageweek.co.nz" title="Email us">
+          <Link to="/services/" className={styles.basicLink}>
+            Services
+          </Link>
+          {/* <a className={styles.contact} href="mailto:info@wellingtonheritageweek.co.nz" title="Email us">
             info@wellingtonheritageweek.co.nz
-          </a>
+          </a> */}
           <span className={styles.legal}>
             © The Heritage Practice Ltd.
             {' '}
