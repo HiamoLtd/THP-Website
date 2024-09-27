@@ -21,6 +21,7 @@ class LandingPageTemplate extends React.Component {
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulEvent.nodes')}
                           type="events"
+                          maxWidth="var(--size-max-width)"
                           padding="var(--size-gutter)"
                           acceptTags={landingPage.allowedTagIDs}
                           blockTags={landingPage.blockedTagIDs}
@@ -29,8 +30,9 @@ class LandingPageTemplate extends React.Component {
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulBlogPost.nodes')}
                           type="blog"
+                          maxWidth="var(--size-max-width)"
                           padding="var(--size-gutter)"
-                          layout="large"
+                          layout="wide"
                         />;
     }
 
