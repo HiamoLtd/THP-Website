@@ -60,6 +60,8 @@
   /* tokens */
   /* colors */
   --background: var(--white);
+  --background-light: var(--light);
+  --background-dark: var(--dark);
   --border: var(--black-fade-5);
 
   /* text */
