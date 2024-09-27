@@ -48,7 +48,7 @@ class LandingPageTemplate extends React.Component {
         <Hero
           title={landingPage.title}
           content={landingPage.content}
-          variant="headline"
+          type="flex"
         />
         {landingPage.openTime ? (
           <Countdown
