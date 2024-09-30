@@ -40,7 +40,7 @@ TODO: Maybe linking to entries when not inline should make buttons? */
   background: white;
   border: 1px solid var(--primary);
   color: var(--primary);
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   font-weight: bold;
   margin-top: 20px;
   position: relative;

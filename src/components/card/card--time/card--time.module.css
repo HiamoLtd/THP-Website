@@ -64,7 +64,7 @@
   background-color: var(--tertiary);
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   display: block;
   font-weight: bold;
   font-size: 16px;

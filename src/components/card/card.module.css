@@ -3,7 +3,7 @@
 }
 
 .image {
-  border-radius: 20px 10px 5px 5px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .body {
@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  border-radius: 20px 10px 5px 10px;
+  border-radius: var(--radius-md);
   box-shadow: 0 0 8px rgba(0,0,0,.1);
   background-color: white;
   overflow: hidden;
@@ -30,7 +30,7 @@
   transform: scale(.985);
   cursor: pointer;
   box-shadow: 0 0 12px rgba(0,0,0,0.3);
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .title {
@@ -54,7 +54,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 20px 0 5px 0;
+  border-radius: var(--radius-md) 0 var(--radius-md) 0;
   font-weight: 600;
   padding: 3px 25px;
   background-color: var(--tertiary);
@@ -68,7 +68,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 20px 10px 0 0;
+  border-radius: var(--radius-md) 0 var(--radius-md) 0;
   text-align: center;
 }
 

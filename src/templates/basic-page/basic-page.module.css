@@ -127,7 +127,7 @@
 .details {
   padding: var(--space-md) var(--space-lg);
   background-color: #F5F5F5;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   height: fit-content;
 }
 

@@ -37,7 +37,7 @@
   text-decoration: none;
   color: #000;
   background-color: white;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   width: fit-content;
   margin: 0 auto;
 }

@@ -36,7 +36,7 @@
 .content-inner-wrapper {
   color: var(--dark);
   padding: var(--space-2xl) var(--size-gutter);
-  border-radius: 20px;
+  border-radius: var(--radius-md);
 }
 
 .title {

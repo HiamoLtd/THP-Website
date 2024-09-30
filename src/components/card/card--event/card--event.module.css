@@ -21,7 +21,7 @@
 .times-grid span {
   padding: 3px 5px;
   background-color: #d0d6dc;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   text-align: center;
   font-weight: 500;
 }
@@ -46,7 +46,7 @@
   color: white;
   background-color: var(--tertiary);
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   font-weight: bold;
   font-size: 14px;
   flex-shrink: 0;

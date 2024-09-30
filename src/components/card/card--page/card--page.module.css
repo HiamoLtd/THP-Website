@@ -46,7 +46,7 @@
   color: white;
   background-color: var(--tertiary);
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   font-weight: bold;
   font-size: 14px;
   flex-shrink: 0;
