@@ -183,7 +183,8 @@
   }
 
   .details {
-    padding: 0 0 - var(--size-gutter);
+    padding: var(--size-gutter) 0;
+    margin-top: var(--size-gutter);
     width: 100%;
     left: 0;
   }
