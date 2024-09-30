@@ -27,7 +27,7 @@ const CardPage = ({ slugPrefix, page, classes }) => {
   return (
     <div id={page.id} className={wrapperClasses}>
       {/* <Link to={`/${slugPrefix}/${page.slug}`} className={`${styles.body} ${styles.cardLink}`}> */}
-      <Link to={`/`} className={`${styles.body} ${styles.cardLink}`}>
+      <Link to={`/${page.slug || ''}`} className={`${styles.body} ${styles.cardLink}`}>
         {page.bannerImg?.img ? (
           <GatsbyImage
             alt={page.bannerImg.alt}
@@ -40,11 +40,11 @@ const CardPage = ({ slugPrefix, page, classes }) => {
         )}
         <div className={`${styles.content} ${typeStyles.content}`}>
           {/* <h3 className={styles.title}>{page.shortTitle ? page.shortTitle : page.title}</h3> */}
-          <h3 className={styles.title}>[Service Name]</h3>
+          <h3 className={styles.title}>{page.title || "[Service Name]"}</h3>
           {/* {page.intro?.raw && (
             <em>{plainTextIntro}</em>
           )} */}
-          <em>[A description of this service.]</em>
+          <em>{page.intro || "[A short description for this service.]"}</em>
           <strong>Learn more →</strong>
         </div>
       </Link>
