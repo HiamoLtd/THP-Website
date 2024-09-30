@@ -21,7 +21,11 @@
   overflow: clip;
   z-index: 1;
   position: relative;
-  width: 90%;
+  /* width: 90%; */
+}
+
+.use-full-page-hero > .article {
+  margin-top: -5rem;
 }
 
 .article {
