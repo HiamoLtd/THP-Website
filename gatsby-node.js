@@ -157,7 +157,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // -----------------------------
   //
   // Define a template for blog post
-  const blogPostTemplate = path.resolve('./src/templates/blogs/blog-post.js');
+  const blogPostTemplate = path.resolve('./src/templates/subpages_HARDCODED/subpageHC.js');
 
   // Gather blog post data from Contentful
   console.log('Gathering blog posts...');
