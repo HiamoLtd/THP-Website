@@ -3,7 +3,7 @@
   height: auto;
   position: relative;
   padding: var(--space-3xl) var(--size-gutter);
-  background-color: #fdf3eb;
+  background-color: var(--background-light);
 }
 
 .content-wrapper {
