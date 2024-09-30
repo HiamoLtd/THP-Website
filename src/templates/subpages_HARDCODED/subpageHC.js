@@ -32,30 +32,30 @@ const HardcodedContent = () => {
 
 class SubpageHCTemplate extends React.Component {
   render() {
-    const post = get(this.props, 'data.contentfulBlogPost');
+    // const post = get(this.props, 'data.contentfulBlogPost');
     // const seo = post.seo;
 
     // const previous = get(this.props, 'data.previous');
     // const next = get(this.props, 'data.next');
 
-    const plainTextIntro = post.intro?.raw && documentToPlainTextString(JSON.parse(post.intro.raw));
-    const plainTextContent = post.content?.raw && documentToPlainTextString(JSON.parse(post.content.raw));
+    // const plainTextIntro = post.intro?.raw && documentToPlainTextString(JSON.parse(post.intro.raw));
+    // const plainTextContent = post.content?.raw && documentToPlainTextString(JSON.parse(post.content.raw));
     // Styles the article and hero. Can be "full-page" or "flex"
     const heroVariant = 'full-page';
 
-    const options = {
-      renderNode: {
-        [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        const { gatsbyImageData, description } = node.data.target
-        return (
-           <GatsbyImage
-              image={getImage(gatsbyImageData)}
-              alt={description}
-           />
-         )
-        },
-      },
-    };
+    // const options = {
+    //   renderNode: {
+    //     [BLOCKS.EMBEDDED_ASSET]: (node) => {
+    //     const { gatsbyImageData, description } = node.data.target
+    //     return (
+    //        <GatsbyImage
+    //           image={getImage(gatsbyImageData)}
+    //           alt={description}
+    //        />
+    //      )
+    //     },
+    //   },
+    // };
 
     return (
       <Layout location={this.props.location}>
@@ -138,82 +138,82 @@ class SubpageHCTemplate extends React.Component {
 
 export default SubpageHCTemplate;
 
-export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $slug: String!
-    $previousPostSlug: String
-    $nextPostSlug: String
-  ) {
-    contentfulBlogPost(slug: { eq: $slug }) {
-      slug
-      title
-      authors {
-        id
-        name
-        description {
-          description
-        }
-        email
-        phone
-        website
-        facebookUrl
-        instagramUrl
-        linkedInUrl
-        twitterUrl
-        tikTokUrl
-      }
-      publishDate(formatString: "MMMM Do, YYYY")
-      rawDate: publishDate
-      bannerImg {
-        img {
-          gatsbyImage(
-            layout: FULL_WIDTH
-            placeholder: DOMINANT_COLOR
-            width: 480
-            height: 270
-          )
-          url
-        }
-        alt
-      }
-      intro {
-        raw
-      }
-      content {
-        raw
-        references {
-          ... on ContentfulAsset {
-            contentful_id
-            title
-            description
-            gatsbyImageData(width: 1200)
-            __typename
-          }
-        }
-      }
-      metadata {
-        tags {
-          contentful_id
-        }
-      }
-      seo {
-        allowRobots
-        description
-        keywords
-        title
-        img {
-          url
-        }
-        noRobotsTagIDs
-      }
-    }
-    previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
-      slug
-      title
-    }
-    next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
-      slug
-      title
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query BlogPostBySlug(
+//     $slug: String!
+//     $previousPostSlug: String
+//     $nextPostSlug: String
+//   ) {
+//     contentfulBlogPost(slug: { eq: $slug }) {
+//       slug
+//       title
+//       authors {
+//         id
+//         name
+//         description {
+//           description
+//         }
+//         email
+//         phone
+//         website
+//         facebookUrl
+//         instagramUrl
+//         linkedInUrl
+//         twitterUrl
+//         tikTokUrl
+//       }
+//       publishDate(formatString: "MMMM Do, YYYY")
+//       rawDate: publishDate
+//       bannerImg {
+//         img {
+//           gatsbyImage(
+//             layout: FULL_WIDTH
+//             placeholder: DOMINANT_COLOR
+//             width: 480
+//             height: 270
+//           )
+//           url
+//         }
+//         alt
+//       }
+//       intro {
+//         raw
+//       }
+//       content {
+//         raw
+//         references {
+//           ... on ContentfulAsset {
+//             contentful_id
+//             title
+//             description
+//             gatsbyImageData(width: 1200)
+//             __typename
+//           }
+//         }
+//       }
+//       metadata {
+//         tags {
+//           contentful_id
+//         }
+//       }
+//       seo {
+//         allowRobots
+//         description
+//         keywords
+//         title
+//         img {
+//           url
+//         }
+//         noRobotsTagIDs
+//       }
+//     }
+//     previous: contentfulBlogPost(slug: { eq: $previousPostSlug }) {
+//       slug
+//       title
+//     }
+//     next: contentfulBlogPost(slug: { eq: $nextPostSlug }) {
+//       slug
+//       title
+//     }
+//   }
+// `;
