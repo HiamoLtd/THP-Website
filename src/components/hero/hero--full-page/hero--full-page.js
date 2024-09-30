@@ -37,7 +37,8 @@ const HeroFullPage = ({
         }
         <div className={styles.details}>
           {status && (<span className={`${styles.detailPill} ${statusLevelClass}`}>{status}</span>)}
-          <h1 className={styles.title}>{title}</h1>
+          {/* TODO: Make this a reusable "highlight title" module */}
+          <h1 className={styles.title}><span>{title}</span></h1>
           {content && (
             <div className={styles.content}>{usesRichtext ? renderRichText(content) : content}</div>
           )}
