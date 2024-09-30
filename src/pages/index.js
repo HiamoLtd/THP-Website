@@ -81,6 +81,16 @@ const TEMPServices = () => {
     </div>
   );
 };
+
+const TEMPContact = () => {
+  // const content = TEMPWhoWeAreContent();
+  return (
+    <Banner
+      type="cta"
+      title="Contact Us"
+      content={(<a href="mailto:contact@theheritagepractice.co.nz">contact@theheritagepractice.co.nz</a>)}
+      usesRichtext={false}
+    />
   );
 };
 
@@ -118,7 +128,8 @@ class RootIndex extends React.Component {
 
         {/* THP - Contact Section */}
         {/* TODO: Do we want this? */}
-        {homepage.contactContent && (
+        <TEMPContact />
+        {/* {homepage.contactContent && (
           <Banner
             type="cta"
             title="CONTACT US"
@@ -126,7 +137,7 @@ class RootIndex extends React.Component {
             // classes={styles.contactBanner}
             usesRichtext={true}
           />
-        )}
+        )} */}
 
         {/* TODO: "What we're involved with"? */}
 
@@ -141,8 +152,6 @@ class RootIndex extends React.Component {
             usesRichtext={true}
           />
         )} */}
-        {/* Sponsors */}
-        {/* <Sponsors /> */}
 
         {/* TODO: */}
       </Layout>
