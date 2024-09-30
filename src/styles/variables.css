@@ -18,7 +18,8 @@
   --secondary: #fae5d4;
   --tertiary: #100f0d;
   --dark: #100f0d;
-  --light: #fae5d4;
+  --medium: #fae5d4;
+  --light: #fdf3eb;
 
   /* radii */
   --radius-sm: 4px;
@@ -61,6 +62,7 @@
   /* colors */
   --background: var(--white);
   --background-light: var(--light);
+  --background-medium: var(--medium);
   --background-dark: var(--dark);
   --border: var(--black-fade-5);
 
