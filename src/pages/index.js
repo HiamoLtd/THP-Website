@@ -46,34 +46,41 @@ const TEMPServices = () => {
   const serviceExampleItems = [
     {
       title: "[Service One]",
-      intro: "[This is an intro for service one.]",
-      imgName: "service_1.jpg"
+      intro: "[A very short intro for service one.]",
+      imgName: "service_1.jpg",
+      slug: "blog/the-utaina-project/"
     },
     {
       title: "[Service Two]",
-      intro: "[This is an intro for service two.]",
-      imgName: "service_2.jpg"
+      intro: "[A very short intro for service two.]",
+      imgName: "service_2.jpg",
+      slug: "blog/the-utaina-project/"
     },
     {
       title: "[Service Three]",
-      intro: "[This is an intro for service three.]",
-      imgName: "service_3.jpg"
+      intro: "[A very short intro for service three.]",
+      imgName: "service_3.jpg",
+      slug: "blog/the-utaina-project/"
     },
   ];
   return (
-    <>
+    <div id="services">
       <Banner
         type="cta"
         title="What We Do"
+        content={(<><p style={{padding: '0', marginBottom: '0' }}>[We offer a range of services to help with your heritage-related needs.]</p></>)}
+        usesRichtext={false}
       />
       <CardGrid
         items={serviceExampleItems}
         type="page"
-        padding="0 var(--size-gutter)"
+        padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
         maxWidth="var(--size-max-width)"
         bgColor="var(--secondary)"
       />
-    </>
+    </div>
+  );
+};
   );
 };
 
