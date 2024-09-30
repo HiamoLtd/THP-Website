@@ -29,7 +29,7 @@ body {
   color: var(--text-dark);
   font-family: var(--font-sans);
   font-size: 16px;
-  font-weight: var(--body);
+  font-weight: var(--fw-body);
   /*
     Set to 0 in body, then to default in ___gatsby
     component to stop footer being pushed up.
@@ -56,7 +56,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: var(--semibold);
+  font-weight: var(--fw-semibold);
   line-height: var(--dense);
 }
 
@@ -73,7 +73,7 @@ a:hover {
 }
 
 a.active {
-  font-weight: var(--bold);
+  font-weight: var(--fw-bold);
 }
 
 tt,
@@ -95,7 +95,7 @@ tt,
 code {
   background-color: var(--black-fade-5);
   border-radius: var(--radius-sm);
-  font-weight: var(--medium);
+  font-weight: var(--fw-medium);
   padding: 0.2em 0;
 }
 

@@ -29,6 +29,7 @@
 .content {
   color: #212121;
   font-size: var(--text-lead);
+  font-weight: var(--fw-medium);
   margin: 0;
 }
 

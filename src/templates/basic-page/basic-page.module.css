@@ -41,7 +41,7 @@
 
 .article a {
   border-bottom: 1.5px solid currentColor;
-  font-weight: var(--medium);
+  font-weight: var(--fw-medium);
 }
 
 .article a:hover {
@@ -64,7 +64,7 @@
 .article h5,
 .article h6 {
   font-size: var(--text-prose);
-  font-weight: var(--semibold);
+  font-weight: var(--fw-semibold);
   margin-bottom: 0.5em;
 }
 

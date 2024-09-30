@@ -41,14 +41,14 @@
 .title {
   letter-spacing: -0.012em;
   font-size: var(--text-title);
-  font-weight: var(--extrabold);
+  font-weight: var(--fw-extrabold);
   line-height: var(--solid);
   margin: 0;
 }
 
 .content {
   font-size: var(--text-lead);
-  font-weight: var(--semibold);
+  font-weight: var(--fw-semibold);
   margin: 0;
 }
 

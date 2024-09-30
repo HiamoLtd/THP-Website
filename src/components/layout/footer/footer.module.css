@@ -47,7 +47,7 @@
 .text-column a,
 .attribution a {
   border-bottom: 1.5px solid black;
-  font-weight: var(--medium);
+  font-weight: var(--fw-medium);
 }
 
 .text-column a:hover,
