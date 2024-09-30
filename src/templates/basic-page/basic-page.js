@@ -12,6 +12,28 @@ import { Layout, Hero, Sponsors } from '../../components';
 import * as styles from './basic-page.module.css';
 
 
+const HardcodedIntro = () => {
+  return (
+    <div className={styles.intro}>
+    <p>[An introduction to the about page goes here. This could be a few sentences long, for example. It will always be bolded.]</p>
+    </div>
+  )
+}
+
+const HardcodedContent = () => {
+  return (
+    <>
+    <p>[The Heritage Practice is a Wellington-based consultancy that helps protect and manage Aotearoa's heritage places. We work with building owners, architects, and councils to ensure heritage sites are cared for and adapted in ways that respect their history.]</p>
+    <p>[Our services include writing conservation plans, supporting resource consents, and giving expert advice on heritage projects, helping to protect the taonga of our past for future generations.]</p>
+    <p>&nbsp;</p>
+    <h2>Meet Our Team</h2>
+    <h5>Moira Smith</h5>
+    <p>[Our services include writing conservation plans, supporting resource consents, and giving expert advice on heritage projects, helping to protect the taonga of our past for future generations.]</p>
+    <p>&nbsp;</p>
+    </>
+  )
+}
+
 class BasicPageTemplate extends React.Component {
   render() {
     const page = get(this.props, 'data.contentfulBasicPage');
@@ -52,8 +74,9 @@ class BasicPageTemplate extends React.Component {
           entryTags={page.metadata?.tags}
         />
         <Hero
-          altImage={page.bannerImg}
-          title={page.title}
+          hardcodedImageUrl={"/images/service_3.jpg"}
+          // altImage={page.bannerImg}
+          title={"About Us"}
           variant={heroVariant}
           usesRichtext={false}
         />
@@ -67,17 +90,17 @@ class BasicPageTemplate extends React.Component {
                 </p>
               )}
               {/* Body content text */}
-              {page.intro?.raw &&
+              <HardcodedIntro />
+              {/* {page.intro?.raw &&
                 <div className={styles.intro}>
                   {renderRichText(page.intro, options)}
                 </div>
-              }
-              {page.content?.raw && renderRichText(page.content, options)}
+              } */}
+              <HardcodedContent />
+              {/* {page.content?.raw && renderRichText(page.content, options)} */}
             </div>
           </div>
         </div>
-        {/* All basic pages display sponsors at the bottom, for now. */}
-        <Sponsors />
       </Layout>
     )
   }
