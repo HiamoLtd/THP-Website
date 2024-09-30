@@ -24,11 +24,23 @@
   width: 90%;
 }
 
+.use-full-page-hero > .article {
+  margin-top: -5rem;
+}
+
 .article {
   font-size: var(--text-prose);
   letter-spacing: var(--text-prose-tracking);
   line-height: var(--loose);
-  padding: var(--size-gutter);
+  padding: var(--space-3xl) var(--size-gutter);
+}
+
+.article.center-background {
+  background-color: var(--white);
+  overflow: clip;
+  z-index: 1;
+  position: relative;
+  width: 90%;
 }
 
 .intro {
