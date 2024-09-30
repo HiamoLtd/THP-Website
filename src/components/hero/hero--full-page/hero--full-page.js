@@ -24,14 +24,21 @@ const HeroFullPage = ({
   title,
   content,
   usesRichtext = true,
-  status
+  status,
+  hardcodedImageUrl
 }) => {
   const statusLevelClass = status && getStatusClass(status);
+
+  console.log('image:', hardcodedImageUrl)
 
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
-        {altImage
+        {/* TODO: Remove hardcoded image */}
+        {hardcodedImageUrl ?
+          <img src={hardcodedImageUrl} className={styles.image} alt="" />
+        : 
+        altImage
           ? <GatsbyImage className={styles.image} alt={altImage.alt} image={altImage.img?.gatsbyImage} />
           : image && <GatsbyImage className={styles.image} alt={title} image={image} />
         }
