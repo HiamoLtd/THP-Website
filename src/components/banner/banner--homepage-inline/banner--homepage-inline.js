@@ -16,7 +16,7 @@ const BannerHomepageInline = ({
       <div
         className={styles.image}
         // style={{backgroundImage: `url(${image?.url})`}}
-        style={{backgroundImage: `url(/images/THP_home_bg.jpg`}}
+        style={{backgroundImage: `url(/images/THP_Wallpaper_Butterfly.jpg`}}
       >
         <Container bgColor="transparent" classes={styles.contentOuterWrapper} padding="0 var(--size-gutter)">
           <Container bgColor="var(--secondary)" classes={styles.contentInnerWrapper}>
