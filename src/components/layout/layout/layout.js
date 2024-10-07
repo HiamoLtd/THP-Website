@@ -41,7 +41,16 @@ class Layout extends React.Component {
       <>
         <GoogleAnalytics />
         <Navigation />
-        <main style={{ backgroundColor: 'var(--secondary)' }}>{children}</main>
+        <main style={{
+          backgroundColor: 'var(--secondary)',
+          backgroundImage: 'url("images/thp_wallpaper_light.png")',
+          backgroundSize: '75%',
+          backgroundRepeat: 'repeat',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: '-20%'
+        }}>
+          {children}
+        </main>
         <Footer />
       </>
     );
