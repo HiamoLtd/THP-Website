@@ -13,7 +13,7 @@ import * as styles from './subpageHC.module.css';
 const HardcodedIntro = () => {
   return (
     <div className={styles.intro}>
-    <p>[A longer introduction to this service. It will always be bolded, and may be one to three sentences long.]</p>
+    <p>We work with local authorities on heritage strategies and guidance, district plan heritage provisions, heritage surveys, and heritage design guides</p>
     </div>
   )
 }
@@ -21,11 +21,45 @@ const HardcodedIntro = () => {
 const HardcodedContent = () => {
   return (
     <>
-    <p>[A content block discussing the service. This may explain what the service is, how it is offered, and the benefits of it.]</p>
-    <p>[This content could include links, or image panels showing examples of the service. Note: The image panels have not yet been mocked up, but can be if requested.]</p>
-    <p>[Please let me know if the image panels would be of use - they would have an image on one side and "content" on the other explaining what it is in the image.]</p>
-    <p>[This could be useful for providing visual examples of services.]</p>
-    <p>[Note: The site is currently built on the assumption that there will be 3 services offered, but it will be able to handle more.]</p>
+    <h3>Heritage policies and strategies</h3>
+    <p>We have extensive experience working in and with local authorities and provide expert advice on heritage policies and strategies.</p>
+    {/* <p>&nbsp;</p> */}
+    <h3>District Plan heritage provisions</h3>
+    <p>Heritage buildings benefit from being kept in a sustainable ongoing use and can adapted for a suitable reuse. We work with RMA planners writing district plan heritage provisions and provide practical advice on enabling positive heritage outcomes.</p>
+    {/* <p>&nbsp;</p> */}
+    <h3>Heritage surveys and inventories</h3>
+    <p>Heritage studies assist local authorities in identifying heritage places so that historic heritage values can be managed and protected. We undertake research and provide historic heritage evaluations of a single property, suburbs, or groups of heritage places that are linked by a similar history, historic theme, patterns of use, type, or physical appearance.</p>
+    {/* <p>&nbsp;</p> */}
+    <h3>Design guides</h3>
+    <p>Design guides help local authorities explain the intent of district plan heritage provisions and demonstrate ‘what good looks like’.  We work with planners, urban designers, and graphic designers to produce heritage design guides.</p>
+    {/* <p>&nbsp;</p> */}
+    <h3>Expert peer review</h3>
+    <p>We assist local authorities when they make decisions on resource consent applications for heritage buildings. We act technical experts and provide an independent peer review Heritage Impact Assessments and Assessments of Environmental Effects. We can also appear as a heritage expert for notified hearings, appeals, and judicial reviews.</p>
+    <p>&nbsp;</p>
+    <h4>Examples of our work:</h4>
+    <ul>
+      <li>
+        <p>
+          <a href="https://wellington.govt.nz/-/media/arts-and-culture/heritage/files/guide-to-seismic-strengthening-for-heritage-building-owners.pdf?la=en&hash=A5F0D0F2D90CFBF1970C05E327AC21C6439102BA">
+            Guide to Seismic Strengthening for Heritage Building Owners.
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://wellington.govt.nz/-/media/arts-and-culture/heritage/files/heritage-shop-fronts.pdf">
+            Heritage shop fronts: A guide to maintaining and enhancing Wellington's historic shops
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="https://www.building.govt.nz/assets/Uploads/building-code-compliance/b-stability/b1-structure/guidance-securing-parapets-facades.pdf">
+            Heritage input into the GUIDANCE:  Securing parapets and facades on unreinforced masonry buildings: Advice for building owners, councils and engineers
+          </a>
+        </p>
+      </li>
+    </ul>
     </>
   )
 }
@@ -69,9 +103,9 @@ class SubpageHCTemplate extends React.Component {
           entryTags={post.metadata?.tags}
         /> */}
         <Hero
-          hardcodedImageUrl={"/images/service_1.jpg"}
+          hardcodedImageUrl={"/images/01_service_banner.jpg"}
           // altImage={post.bannerImg}
-          title={"Service One Example"}
+          title={"Heritage policy and strategy"}
           variant={heroVariant}
         />
         <div className={`${styles.container} ${heroVariant === 'full-page' && styles.useFullPageHero}`}>
