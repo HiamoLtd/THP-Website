@@ -7,12 +7,20 @@ import { Layout, Banner, CardGrid } from '../components';
 
 const TEMPPurposeContent = () => (
   <>
-    <p>[The Heritage Practice is a Wellington-based consultancy that helps protect and manage Aotearoa's heritage places. We work with building owners, architects, and councils to ensure heritage sites are cared for and adapted in ways that respect their history.</p>
-    <p>Our services include writing conservation plans, supporting resource consents, and giving expert advice on heritage projects, helping to protect the taonga of our past for future generations.]</p>
+    <p>The Heritage Practice is a Wellington-based consultancy that helps protect and manage Aotearoa's built heritage places. We work with building owners, consultants, and councils to ensure heritage sites are cared for and adapted in ways that respect their history and values.</p>
+    <p>We help our clients make informed decisions on heritage matters. Our work includes heritage research, studies, policy, input into district plan provisions, heritage impact assessments and assessments of effects, conservation management, independent peer reviews, and work as an expert witness.</p>
   </>
 );
 
 const TEMPWhoWeAreContent = () => (
+  <>
+    <p>The Heritage Practice was established by heritage expert and registered architect, Moira Smith in 2021. Moira has more than 25 years' experience working with built heritage, both in architecture practice and local government. She is skilled in the sustainable management of heritage places, with expertise working within the RMA and the Building Act (including earthquake prone building legislation).</p>
+    <p>Moira has extensive experience as a project-architect leading large-scale conservation and new-build projects in Central London. She is a subject matter expert with a master's degree in Museum & Heritage Studies, and has worked for many years as a senior heritage advisor at the Wellington City Council. She is also a certified as an Independent Hearings' Commissioner.</p>
+    <a href="/about">About Us</a>
+  </>
+);
+
+const TEMPServicesContent = () => (
   <>
     <p>[Meet our team, and discover how we make your heritage journey easy.]</p>
     <a href="/about">About Us</a>
@@ -22,11 +30,18 @@ const TEMPWhoWeAreContent = () => (
 const TEMPPurposeStatement = () => {
   const content = TEMPPurposeContent();
   return (
-    <Banner
-      type="cta"
-      content={content}
-      usesRichtext={false}
-    />
+    <>
+      <Banner
+        type="cta"
+        content={content}
+        usesRichtext={false}
+        bgColor="var(--secondary)"
+      />
+      {/* <Banner
+        type="cta"
+        bgColor="transparent"
+      /> */}
+    </>
   );
 };
 
@@ -45,21 +60,33 @@ const TEMPWhoWeAre = () => {
 const TEMPServices = () => {
   const serviceExampleItems = [
     {
-      title: "[Service One]",
-      intro: "[A very short intro for service one.]",
-      imgName: "service_1.jpg",
+      title: "Heritage Policy & Strategy",
+      intro: "Heritage advice to local authorities.",
+      imgName: "01_service_banner.jpg",
       slug: "blog/the-utaina-project/"
     },
     {
-      title: "[Service Two]",
-      intro: "[A very short intro for service two.]",
-      imgName: "service_2.jpg",
+      title: "Heritage Expert",
+      intro: "Heritage expert witness for built-heritage matters.",
+      imgName: "02_service_banner.jpg",
       slug: "blog/the-utaina-project/"
     },
     {
-      title: "[Service Three]",
-      intro: "[A very short intro for service three.]",
-      imgName: "service_3.jpg",
+      title: "Resource Consents",
+      intro: "Assessments for resource consent applications.",
+      imgName: "03_service_banner.jpg",
+      slug: "blog/the-utaina-project/"
+    },
+    {
+      title: "Conservation Management",
+      intro: "Expert heritage advice to building owners on the care of heritage places.",
+      imgName: "04_service_banner.jpg",
+      slug: "blog/the-utaina-project/"
+    },
+    {
+      title: "Heritage Projects",
+      intro: "Working with RMA planners, architects, and structural engineers.",
+      imgName: "05_service_banner.jpg",
       slug: "blog/the-utaina-project/"
     },
   ];
@@ -68,15 +95,16 @@ const TEMPServices = () => {
       <Banner
         type="cta"
         title="What We Do"
-        content={(<><p style={{padding: '0', marginBottom: '0' }}>[We offer a range of services to help with your heritage-related needs.]</p></>)}
+        content={(<><p style={{padding: '0', marginBottom: '0' }}>We offer a range of services for built heritage places.</p></>)}
         usesRichtext={false}
+        bgColor="transparent"
       />
       <CardGrid
         items={serviceExampleItems}
         type="page"
         padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
         maxWidth="var(--size-max-width)"
-        bgColor="var(--secondary)"
+        bgColor="transparent"
       />
     </div>
   );
@@ -88,8 +116,9 @@ const TEMPContact = () => {
     <Banner
       type="cta"
       title="Contact Us"
-      content={(<a href="mailto:contact@theheritagepractice.co.nz">contact@theheritagepractice.co.nz</a>)}
+      content={(<a href="mailto:info@theheritagepractice.co.nz">info@theheritagepractice.co.nz</a>)}
       usesRichtext={false}
+      bgColor="var(--secondary)"
     />
   );
 };
@@ -112,7 +141,6 @@ class RootIndex extends React.Component {
         <Banner
           type="homepage-inline"
           title={"The Heritage Practice"}
-          content={homepage.bannerContent?.bannerContent}
           image={homepage.bannerImage}
         />
         {/* THP - Purpose Statement Section */}
