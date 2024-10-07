@@ -13,6 +13,7 @@ const Banner = ({
   content,
   image,
   classes,
+  bgColor,
   usesRichtext = true
 }) => {
   switch (type) {
@@ -21,7 +22,7 @@ const Banner = ({
     case 'homepage-inline':
       return <BannerHomepageInline title={title} content={content} image={image} classes={classes} />;
     case 'cta':
-      return <BannerCTA title={title} content={content} classes={classes} usesRichtext={usesRichtext} />;
+      return <BannerCTA title={title} content={content} classes={classes} bgColor={bgColor} usesRichtext={usesRichtext} />;
     case 'columns':
       return <BannerColumns title={title} content={content} classes={classes} usesRichtext={usesRichtext} />;
     default:
