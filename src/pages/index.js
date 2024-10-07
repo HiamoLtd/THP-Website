@@ -102,6 +102,7 @@ const TEMPServices = () => {
       <CardGrid
         items={serviceExampleItems}
         type="page"
+        layout="wide"
         padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
         maxWidth="var(--size-max-width)"
         bgColor="transparent"
