@@ -43,11 +43,6 @@ class Layout extends React.Component {
         <Navigation />
         <main style={{
           backgroundColor: 'var(--secondary)',
-          backgroundImage: 'url("images/thp_wallpaper_light.png")',
-          backgroundSize: '75%',
-          backgroundRepeat: 'repeat',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: '-20%'
         }}>
           {children}
         </main>
