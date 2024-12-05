@@ -16,6 +16,17 @@ const IntroBanner = (content) => {
   )
 }
 
+const ContactBanner = (contactContent) => {
+  contactContent && (
+    <Banner
+      type="cta"
+      title="CONTACT US"
+      content={contactContent}
+      usesRichtext={true}
+    />
+  )
+}
+
 const TEMPWhoWeAreContent = () => (
   <>
     <p>The Heritage Practice was established by heritage expert and registered architect, Moira Smith in 2021. Moira has more than 25 years' experience working with built heritage, both in architecture practice and local government. She is skilled in the sustainable management of heritage places, with expertise working within the RMA and the Building Act (including earthquake prone building legislation).</p>
@@ -143,17 +154,7 @@ class RootIndex extends React.Component {
         <TEMPServices />
 
         {/* THP - Contact Section */}
-        {/* TODO: Do we want this? */}
-        <TEMPContact />
-        {/* {homepage.contactContent && (
-          <Banner
-            type="cta"
-            title="CONTACT US"
-            content={homepage.contactContent}
-            // classes={styles.contactBanner}
-            usesRichtext={true}
-          />
-        )} */}
+        <ContactBanner content={homepage.contactContent} />
 
         {/* TODO: "What we're involved with"? */}
 
