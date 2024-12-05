@@ -5,15 +5,16 @@ import get from 'lodash/get';
 import { Seo } from '../components/shared';
 import { Layout, Banner, CardGrid } from '../components';
 
-const IntroBanner = (content) => {
-  introContent && (
+const IntroBanner = ({ content }) => {
+  if (!content) return;
+  return (
     <Banner
       type="cta"
       content={content}
-      usesRichtext={false}
+      usesRichtext={true}
       bgColor="var(--secondary)"
     />
-  )
+  );
 }
 
 const ContactBanner = (contactContent) => {
@@ -141,9 +142,9 @@ class RootIndex extends React.Component {
           title={"The Heritage Practice"}
           image={homepage.bannerImage}
         />
+
         {/* THP - Purpose Statement Section */}
         <IntroBanner content={homepage.ctaContent} />
-
         {/* THP - Who We Are Section */}
           {/* TODO: Brief into text, photo, link to about page */}
         <TEMPWhoWeAre />
