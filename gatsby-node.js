@@ -180,12 +180,30 @@ const createBlogPostPages = async (graphql, actions, reporter) => {
   }
 }
 
+const createServicePages = async (graphql, actions, reporter) => {
+  // Define a template for service pages
+  const servicePageTemplate = path.resolve('./src/templates/subpages_HARDCODED/subpageHC.js');
 
+  // Gather blog post data from Contentful
+  // THP SITE NOTE: Filters out any pages tagged "service", as these are loaded in createServicePages.
+  console.log('Gathering service pages, i.e. blog posts tagged "service"...');
+  const services = await asyncGetContentfulPages(
+                            graphql,
+                            reporter,
+                            'allContentfulBlogPost',
+                            'publishDate: DESC',
+                            'metadata: {tags: {elemMatch: {contentful_id: {eq: "service"}}}}'
+                          );
 
-  // --------------------------
-  // EVENTS TEMPLATES & LOADING
-  // --------------------------
-  // const eventPageTemplate = path.resolve('./src/templates/events/event.js');
+  // Create blog posts pages, if there's at least one blog post found in Contentful
+  if (!services) console.log('Error gathering service pages. Skipping service creation.');
+  else if (services.length === 0) console.log('No service pages found.');
+  else if (services.length > 0) {
+    console.log(`Creating ${services?.length} service pages...`);
+    createPagesFromList(actions, services, '/service', servicePageTemplate, true);
+    console.log(`Service pages complete.`);
+  }
+}
 
 const createEventPages = async (graphql, actions, reporter) => {
   const eventPageTemplate = path.resolve('./src/templates/events/event.js');
@@ -286,6 +304,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // ------------------------------
   await createBasicPages(graphql, actions, reporter);
   
+  // --------------------------------
+  // SERVICE PAGE TEMPLATES & LOADING
+  // --------------------------------
+  // THP NOTE: Specific to THP. Create "service" pages
+  //           from blog posts tagged "service".
+  // ------------------------------
+  await createServicePages(graphql, actions, reporter);
 
   // --------------------------
   // REDIRECTS ADDED TO NETLIFY
