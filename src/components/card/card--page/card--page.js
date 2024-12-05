@@ -26,9 +26,7 @@ const CardPage = ({ slugPrefix, page, classes }) => {
 
   return (
     <div id={page.id} className={wrapperClasses}>
-      {/* <Link to={`/${slugPrefix}/${page.slug}`} className={`${styles.body} ${styles.cardLink}`}> */}
-      <Link to={`/${page.slug || ''}`} className={`${styles.body} ${styles.cardLink}`}>
-        {page.bannerImg?.img ? (
+      <Link to={`/${slugPrefix}/${page.slug}`} className={`${styles.body} ${styles.cardLink}`}>
           <GatsbyImage
             alt={page.bannerImg.alt}
             image={page.bannerImg.img?.gatsbyImage}

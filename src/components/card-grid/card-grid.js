@@ -44,6 +44,7 @@ const applyFilters = (items, acceptTags, blockTags, hideChildren) => {
 // TODO: Add card sorting
 const CardGrid = ({
   items,
+  slugPrefix,
   type,
   bgColor = "#F5F5F5",
   layout,
@@ -65,8 +66,6 @@ const CardGrid = ({
 
   const displayItems = applyFilters(items, acceptTags, blockTags, hideChildren);
 
-  // console.log('Ret:', displayItems, items, acceptTags, blockTags, hideChildren);
-
   // TODO: Consider blurring repeat bg of wrong sized images? Could also jus hard resize in Gatsby
   return (
     <Container
@@ -83,6 +82,7 @@ const CardGrid = ({
           return (
             <Card
               item={item}
+              slugPrefix={slugPrefix}
               type={type}
               key={`${type}-${index}`}
             />

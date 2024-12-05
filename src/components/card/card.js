@@ -22,7 +22,12 @@ const getCardClasses = (size) => {
 }
 
 // TODO: Here is where prop types start to really matter
-const Card = ({ item, type, size }) => {
+const Card = ({
+  item,
+  type,
+  slugPrefix,
+  size
+}) => {
   if (!item) return;
 
   const classes = getCardClasses(size);
@@ -41,7 +46,7 @@ const Card = ({ item, type, size }) => {
     case 'blogs':
       return <CardBlog post={item} classes={classes} />;
     default:
-      return <CardPage page={item} classes={classes} />;
+      return <CardPage page={item} slugPrefix={slugPrefix} classes={classes} />;
   }
 };
 
