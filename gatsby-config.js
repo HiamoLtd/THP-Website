@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "The Heritage Practice",
-    description: "The Heritage Practice Ltd. is here to help.",
+    description: "The Heritage Practice helps protect and manage Aotearoa's heritage places, working with owners, consultants, and councils to respect history and values.",
     siteUrl: "https://theheritagepractice.co.nz",
     siteShortUrl: "theheritagepractice.co.nz",
     imagePath: "/images/default_meta_image.png"
