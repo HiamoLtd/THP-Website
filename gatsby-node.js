@@ -182,7 +182,7 @@ const createBlogPostPages = async (graphql, actions, reporter) => {
 
 const createServicePages = async (graphql, actions, reporter) => {
   // Define a template for service pages
-  const servicePageTemplate = path.resolve('./src/templates/subpages_HARDCODED/subpageHC.js');
+  const servicePageTemplate = path.resolve('./src/templates/subpages/subpage.js');
 
   // Gather blog post data from Contentful
   // THP SITE NOTE: Filters out any pages tagged "service", as these are loaded in createServicePages.
