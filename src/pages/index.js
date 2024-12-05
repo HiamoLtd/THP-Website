@@ -5,11 +5,11 @@ import get from 'lodash/get';
 import { Seo } from '../components/shared';
 import { Layout, Banner, CardGrid } from '../components';
 
-const IntroBanner = (introContent) => {
+const IntroBanner = (content) => {
   introContent && (
     <Banner
       type="cta"
-      content={introContent}
+      content={content}
       usesRichtext={false}
       bgColor="var(--secondary)"
     />
@@ -131,7 +131,7 @@ class RootIndex extends React.Component {
           image={homepage.bannerImage}
         />
         {/* THP - Purpose Statement Section */}
-        <IntroBanner introContent={homepage.ctaContent} />
+        <IntroBanner content={homepage.ctaContent} />
 
         {/* THP - Who We Are Section */}
           {/* TODO: Brief into text, photo, link to about page */}
