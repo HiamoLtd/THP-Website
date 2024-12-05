@@ -24,7 +24,7 @@ const Banner = ({
     case 'cta':
       return <BannerCTA title={title} content={content} classes={classes} bgColor={bgColor} usesRichtext={usesRichtext} />;
     case 'columns':
-      return <BannerColumns title={title} content={content} classes={classes} usesRichtext={usesRichtext} />;
+      return <BannerColumns title={title} content={content} image={image} classes={classes} usesRichtext={usesRichtext} />;
     default:
       return <BannerHeader title={title} content={content} image={image} classes={classes} usesRichtext={usesRichtext} />;
   }
