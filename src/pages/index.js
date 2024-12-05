@@ -43,32 +43,12 @@ const ContactBanner = ({ content }) => {
   );
 }
 
-const TEMPWhoWeAreContent = () => (
-  <>
-    <p>The Heritage Practice was established by heritage expert and registered architect, Moira Smith in 2021. Moira has more than 25 years' experience working with built heritage, both in architecture practice and local government. She is skilled in the sustainable management of heritage places, with expertise working within the RMA and the Building Act (including earthquake prone building legislation).</p>
-    <p>Moira has extensive experience as a project-architect leading large-scale conservation and new-build projects in Central London. She is a subject matter expert with a master's degree in Museum & Heritage Studies, and has worked for many years as a senior heritage advisor at the Wellington City Council. She is also a certified as an Independent Hearings' Commissioner.</p>
-    <a href="/about">About Us</a>
-  </>
-);
-
 const TEMPServicesContent = () => (
   <>
     <p>[Meet our team, and discover how we make your heritage journey easy.]</p>
     <a href="/about">About Us</a>
   </>
 );
-
-const TEMPWhoWeAre = () => {
-  const content = TEMPWhoWeAreContent();
-  return (
-    <Banner
-      type="columns"
-      title="Who We Are"
-      content={content}
-      usesRichtext={false}
-    />
-  );
-};
 
 const TEMPServices = () => {
   const serviceExampleItems = [
