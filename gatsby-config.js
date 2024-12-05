@@ -26,7 +26,7 @@ module.exports = {
         enableTags: true
       },
     },
-    "gatsby-plugin-remove-serviceworker",
-    "gatsby-plugin-remove-fingerprints"
+    // "gatsby-plugin-remove-serviceworker",
+    // "gatsby-plugin-remove-fingerprints"
   ],
 };
