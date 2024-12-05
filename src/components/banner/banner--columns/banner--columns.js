@@ -39,6 +39,7 @@ const BannerContent = ({usesRichtext, content}) => {
 const BannerColumns = ({
   title,
   content,
+  image,
   classes,
   usesRichtext = true
 }) => {
@@ -57,7 +58,12 @@ const BannerColumns = ({
           <BannerContent usesRichtext={usesRichtext} content={content} />
         </div>
         <div className={`${styles.column} ${styles.columnImage}`}>
-          <img src="/images/who_we_are.jpg" alt="" />
+          {image && (
+            <GatsbyImage
+              image={image.img?.gatsbyImage}
+              alt={image.alt}
+            />
+          )}
         </div>
       </Container>
     </div>
