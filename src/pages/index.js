@@ -109,18 +109,6 @@ const TEMPServices = () => {
   );
 };
 
-const TEMPContact = () => {
-  // const content = TEMPWhoWeAreContent();
-  return (
-    <Banner
-      type="cta"
-      title="Contact Us"
-      content={(<a href="mailto:info@theheritagepractice.co.nz">info@theheritagepractice.co.nz</a>)}
-      usesRichtext={false}
-      bgColor="var(--secondary)"
-    />
-  );
-};
 
 class RootIndex extends React.Component {
   render() {
