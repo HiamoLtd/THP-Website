@@ -17,15 +17,18 @@ const IntroBanner = ({ content }) => {
   );
 }
 
-const ContactBanner = (contactContent) => {
-  contactContent && (
+
+const ContactBanner = ({ content }) => {
+  if (!content) return;
+  return (
     <Banner
       type="cta"
       title="CONTACT US"
-      content={contactContent}
+      content={content}
       usesRichtext={true}
+      bgColor="var(--secondary)"
     />
-  )
+  );
 }
 
 const TEMPWhoWeAreContent = () => (
