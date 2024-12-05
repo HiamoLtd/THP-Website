@@ -15,9 +15,6 @@ class SubpageTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost');
     const seo = post.seo;
 
-    const previous = get(this.props, 'data.previous');
-    const next = get(this.props, 'data.next');
-
     const plainTextIntro = post.intro?.raw && documentToPlainTextString(JSON.parse(post.intro.raw));
     const plainTextContent = post.content?.raw && documentToPlainTextString(JSON.parse(post.content.raw));
     // Styles the article and hero. Can be "full-page" or "flex"
@@ -70,28 +67,19 @@ class SubpageTemplate extends React.Component {
                 </div>
               }
               {post.content?.raw && renderRichText(post.content, options)}
-              {/* Previous and next article controls */}
+
+              {/* THP: Link back to parent / landing page */}
               {/* TODO: Change with link to parent */}
-              {/* {(previous || next) && (
-                <nav>
+              <nav>
+                <p>&nbsp;</p>
                   <ul className={styles.articleNavigation}>
-                    {previous && (
                       <li>
-                        <Link to={`/blog/${previous.slug}`} rel="prev">
-                          ← {previous.title}
+                        <Link to={`/services`}>
+                          ← View More Services
                         </Link>
                       </li>
-                    )}
-                    {next && (
-                      <li>
-                        <Link to={`/blog/${next.slug}`} rel="next">
-                          {next.title} →
-                        </Link>
-                      </li>
-                    )}
                   </ul>
                 </nav>
-              )} */}
             </div>
           </div>
         </div>
