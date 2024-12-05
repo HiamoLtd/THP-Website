@@ -17,6 +17,18 @@ const IntroBanner = ({ content }) => {
   );
 }
 
+const WhoWeAreBanner = ({ content, image }) => {
+  if (!content) return;
+  return (
+    <Banner
+      type="columns"
+      title="Who We Are"
+      content={content}
+      image={image}
+      usesRichtext={true}
+    />
+  );
+};
 
 const ContactBanner = ({ content }) => {
   if (!content) return;
@@ -137,8 +149,7 @@ class RootIndex extends React.Component {
         {/* THP - Purpose Statement Section */}
         <IntroBanner content={homepage.ctaContent} />
         {/* THP - Who We Are Section */}
-          {/* TODO: Brief into text, photo, link to about page */}
-        <TEMPWhoWeAre />
+        <WhoWeAreBanner content={homepage.whoWeAreContent} image={homepage.whoWeAreImg} />
         
         {/* THP - Services We Provide Section */}
         {/* TODO: Three sections, title, description, link for each one? Or just link to services page? */}
