@@ -1,18 +1,22 @@
 const path = require('path');
 
 // Pull pages of a given type from Contentful
-const asyncGetContentfulPages = async (graphql, reporter, requestType, filterOptions = null) => {
+const asyncGetContentfulPages = async (graphql, reporter, requestType, sortOptions, filterOptions) => {
   const result = await graphql(
     `
-      {
-        ${requestType}${filterOptions ? ' (sort: {' + filterOptions + '})' : ''} {
-          nodes {
-            title
-            slug
-          }
+    {
+      ${requestType}
+      ${(sortOptions || filterOptions) ? `(
+        ${sortOptions ? 'sort: {' + sortOptions + '}' : ''}
+        ${filterOptions ? 'filter: {' + filterOptions + '}' : ''}
+      )` : ''} {
+        nodes {
+          title
+          slug
         }
       }
-    `
+    }
+  `
   );
 
   if (result.errors) {
