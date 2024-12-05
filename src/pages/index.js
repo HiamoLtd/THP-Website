@@ -193,14 +193,27 @@ export default RootIndex;
 export const pageQuery = graphql`
   query HomeQuery {
     contentfulHomepage {
-      title
-      bannerContent {
-        bannerContent
-      }
       bannerImage {
         url
       }
       ctaContent {
+        raw
+      }
+      whoWeAreContent {
+        raw
+      }
+      whoWeAreImg {
+        img {
+          gatsbyImage(
+            layout: FULL_WIDTH
+            placeholder: DOMINANT_COLOR
+            width: 1200
+          )
+        }
+        alt
+      }
+      featuredGridTitle
+      featuredGridContent {
         raw
       }
       contactContent {
