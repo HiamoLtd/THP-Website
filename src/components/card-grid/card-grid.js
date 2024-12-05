@@ -14,7 +14,7 @@ const applyFilters = (items, acceptTags, blockTags, hideChildren) => {
     if (!item) return false;
 
     const tags = item.metadata?.tags;
-    // Remove item if it has a hidden tag
+    // Remove item if it has a blocked tag
     if (
       blockTags?.length > 0 &&
       (tags && blockTags.some((blockTag) => tags.some((t) => t.contentful_id === blockTag)))

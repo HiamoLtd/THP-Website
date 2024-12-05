@@ -38,6 +38,8 @@ class LandingPageTemplate extends React.Component {
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulBlogPost.nodes')}
                           slugPrefix={listServices ? 'service' : 'blog'}
+                          acceptTags={landingPage.allowedTagIDs}
+                          blockTags={landingPage.blockedTagIDs}
                           type={listServices ? 'service' : 'blog'}
                           maxWidth="var(--size-max-width)"
                           padding="var(--size-gutter)"
@@ -172,6 +174,11 @@ export const pageQuery = graphql`
       sort: { publishDate: DESC }
     ) {
       nodes {
+        metadata {
+          tags {
+            contentful_id
+          }
+        }
         title
         slug
         publishDate(formatString: "MMMM Do, YYYY")
