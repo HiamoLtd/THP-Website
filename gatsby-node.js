@@ -151,17 +151,20 @@ const createFileLinksFromList = (actions, list) => {
   });
 }
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  // -----------------------------
-  // BLOG POST TEMPLATES & LOADING
-  // -----------------------------
-  //
+const createBlogPostPages = async (graphql, actions, reporter) => {
   // Define a template for blog post
-  const blogPostTemplate = path.resolve('./src/templates/subpages_HARDCODED/subpageHC.js');
+  const blogPostTemplate = path.resolve('./src/templates/blogs/blog-post.js');
 
   // Gather blog post data from Contentful
-  console.log('Gathering blog posts...');
-  const blogPosts = await asyncGetContentfulPages(graphql, reporter, 'allContentfulBlogPost', 'publishDate: DESC');
+  // THP SITE NOTE: Filters out any pages tagged "service", as these are loaded in createServicePages.
+  console.log('Gathering blog posts, but not "service" posts...');
+  const blogPosts = await asyncGetContentfulPages(
+                            graphql,
+                            reporter,
+                            'allContentfulBlogPost',
+                            'publishDate: DESC',
+                            'metadata: {tags: {elemMatch: {contentful_id: {nin: "service"}}}}'
+                          );
 
   // Create blog posts pages, if there's at least one blog post found in Contentful
   if (!blogPosts) console.log('Error gathering blog posts. Skipping blog creation.');
@@ -171,6 +174,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPagesFromList(actions, blogPosts, '/blog', blogPostTemplate, true);
     console.log(`Blog posts complete.`);
   }
+}
+
 
 
   // --------------------------
@@ -178,21 +183,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // --------------------------
   // const eventPageTemplate = path.resolve('./src/templates/events/event.js');
 
-  // console.log('Gathering event pages...');
-  // const events = await asyncGetContentfulPages(graphql, reporter, 'allContentfulEvent');
+const createEventPages = async (graphql, actions, reporter) => {
+  const eventPageTemplate = path.resolve('./src/templates/events/event.js');
 
-  // if (events === null) console.log('Error gathering events. Skipping events creation.');
-  // else if (events.length === 0) console.log('No events found.');
-  // else if (events.length > 0) {
-  //   console.log(`Creating ${events?.length} event pages...`);
-  //   createPagesFromList(actions, events, '/event', eventPageTemplate, false);
-  //   console.log(`Event pages complete.`);
-  // }
+  console.log('Gathering event pages...');
+  const events = await asyncGetContentfulPages(graphql, reporter, 'allContentfulEvent');
 
+  if (!events) console.log('Error gathering events. Skipping events creation.');
+  else if (events.length === 0) console.log('No events found.');
+  else if (events.length > 0) {
+    console.log(`Creating ${events?.length} event pages...`);
+    createPagesFromList(actions, events, '/event', eventPageTemplate, false);
+    console.log(`Event pages complete.`);
+  }
+}
 
-  // --------------------------------
-  // LANDING PAGE TEMPLATES & LOADING
-  // --------------------------------
+const createLandingPages = async (graphql, actions, reporter) => {
   const landingPageTemplate = path.resolve('./src/templates/landing-page/landing-page.js');
 
   console.log('Gathering landing pages...');
@@ -205,12 +211,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPagesFromList(actions, landingPages, null, landingPageTemplate, false);
     console.log(`Landing pages complete.`);
   }
+}
 
-
-  // ------------------------------
-  // BASIC PAGE TEMPLATES & LOADING
-  // ------------------------------
-  //
+const createBasicPages = async (graphql, actions, reporter) => {
   // Define a template for basic pages
   const basicPageTemplate = path.resolve('./src/templates/basic-page/basic-page.js');
 
@@ -226,12 +229,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPagesFromList(actions, basicPages, null, basicPageTemplate, false);
     console.log(`Basic pages complete.`);
   }
+}
 
-
-  // --------------------------
-  // REDIRECTS ADDED TO NETLIFY
-  // --------------------------
-  //
+const createNetlifyRedirects = async (graphql, actions, reporter) => {
   // Add redirects to Netlify's redirect file via gatsby-plugin-netlify
   const redirects = await asyncGetContentfulRedirects(graphql, reporter);
 
@@ -242,12 +242,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createRedirectsFromList(actions, redirects);
     console.log(`Redirects complete.`);
   }
-  
+}
 
-  // ----------------------------------------------
-  // REDIRECTS TO SPECIFIED ASSETS ADDED TO NETLIFY
-  // ----------------------------------------------
-  //
+const createAssetRedirects = async (graphql, actions, reporter) => {
   // Add links to uploaded assets / files
   // Add redirects to Netlify's redirect file via gatsby-plugin-netlify
   const fileLinks = await asyncGetContentfulFileLink(graphql, reporter);
@@ -259,4 +256,40 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createFileLinksFromList(actions, fileLinks);
     console.log(`File links complete.`);
   }
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  // -----------------------------
+  // BLOG POST TEMPLATES & LOADING
+  // -----------------------------
+  // THP NOTE: SKIPPED. But other "blog posts" are made
+  //           as "service" pages below.
+  // ------------------------------
+  // await createBlogPostPages(graphql, actions, reporter);
+
+  // --------------------------
+  // EVENTS TEMPLATES & LOADING
+  // --------------------------
+  // await createEventPages(graphql, actions, reporter);
+
+  // --------------------------------
+  // LANDING PAGE TEMPLATES & LOADING
+  // --------------------------------
+  await createLandingPages(graphql, actions, reporter);
+
+  // ------------------------------
+  // BASIC PAGE TEMPLATES & LOADING
+  // ------------------------------
+  await createBasicPages(graphql, actions, reporter);
+  
+
+  // --------------------------
+  // REDIRECTS ADDED TO NETLIFY
+  // --------------------------
+  await createNetlifyRedirects(graphql, actions, reporter);
+
+  // ----------------------------------------------
+  // REDIRECTS TO SPECIFIED ASSETS ADDED TO NETLIFY
+  // ----------------------------------------------
+  await createAssetRedirects(graphql, actions, reporter);
 }
