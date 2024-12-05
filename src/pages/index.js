@@ -5,12 +5,16 @@ import get from 'lodash/get';
 import { Seo } from '../components/shared';
 import { Layout, Banner, CardGrid } from '../components';
 
-const TEMPPurposeContent = () => (
-  <>
-    <p>The Heritage Practice is a Wellington-based consultancy that helps protect and manage Aotearoa's built heritage places. We work with building owners, consultants, and councils to ensure heritage sites are cared for and adapted in ways that respect their history and values.</p>
-    <p>We help our clients make informed decisions on heritage matters. Our work includes heritage research, studies, policy, input into district plan provisions, heritage impact assessments and assessments of effects, conservation management, independent peer reviews, and work as an expert witness.</p>
-  </>
-);
+const IntroBanner = (introContent) => {
+  introContent && (
+    <Banner
+      type="cta"
+      content={introContent}
+      usesRichtext={false}
+      bgColor="var(--secondary)"
+    />
+  )
+}
 
 const TEMPWhoWeAreContent = () => (
   <>
@@ -26,24 +30,6 @@ const TEMPServicesContent = () => (
     <a href="/about">About Us</a>
   </>
 );
-
-const TEMPPurposeStatement = () => {
-  const content = TEMPPurposeContent();
-  return (
-    <>
-      <Banner
-        type="cta"
-        content={content}
-        usesRichtext={false}
-        bgColor="var(--secondary)"
-      />
-      {/* <Banner
-        type="cta"
-        bgColor="transparent"
-      /> */}
-    </>
-  );
-};
 
 const TEMPWhoWeAre = () => {
   const content = TEMPWhoWeAreContent();
@@ -145,7 +131,8 @@ class RootIndex extends React.Component {
           image={homepage.bannerImage}
         />
         {/* THP - Purpose Statement Section */}
-        <TEMPPurposeStatement />
+        <IntroBanner introContent={homepage.ctaContent} />
+
         {/* THP - Who We Are Section */}
           {/* TODO: Brief into text, photo, link to about page */}
         <TEMPWhoWeAre />
