@@ -66,67 +66,6 @@ const ContactBanner = ({ content }) => {
   );
 }
 
-const TEMPServicesContent = () => (
-  <>
-    <p>[Meet our team, and discover how we make your heritage journey easy.]</p>
-    <a href="/about">About Us</a>
-  </>
-);
-
-const TEMPServices = () => {
-  const serviceExampleItems = [
-    {
-      title: "Heritage Policy & Strategy",
-      intro: "Heritage advice to local authorities.",
-      imgName: "01_service_banner.jpg",
-      slug: "blog/the-utaina-project/"
-    },
-    {
-      title: "Heritage Expert",
-      intro: "Heritage expert witness for built-heritage matters.",
-      imgName: "02_service_banner.jpg",
-      slug: "blog/the-utaina-project/"
-    },
-    {
-      title: "Resource Consents",
-      intro: "Assessments for resource consent applications.",
-      imgName: "03_service_banner.jpg",
-      slug: "blog/the-utaina-project/"
-    },
-    {
-      title: "Conservation Management",
-      intro: "Expert heritage advice to building owners on the care of heritage places.",
-      imgName: "04_service_banner.jpg",
-      slug: "blog/the-utaina-project/"
-    },
-    {
-      title: "Heritage Projects",
-      intro: "Working with RMA planners, architects, and structural engineers.",
-      imgName: "05_service_banner.jpg",
-      slug: "blog/the-utaina-project/"
-    },
-  ];
-  return (
-    <div id="services">
-      <Banner
-        type="cta"
-        title="What We Do"
-        content={(<><p style={{padding: '0', marginBottom: '0' }}>We offer a range of services for built heritage places.</p></>)}
-        usesRichtext={false}
-        bgColor="transparent"
-      />
-      <CardGrid
-        items={serviceExampleItems}
-        type="page"
-        layout="wide"
-        padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
-        maxWidth="var(--size-max-width)"
-        bgColor="transparent"
-      />
-    </div>
-  );
-};
-
 
 class RootIndex extends React.Component {
   render() {
