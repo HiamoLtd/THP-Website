@@ -13,6 +13,11 @@ const Sponsors = () => {
       allContentfulSiteSettings(filter: {activeSettings: {eq: "Site-Wide Settings"}}) {
         nodes {
           sponsors {
+            metadata {
+              tags {
+                contentful_id
+              }
+            }
             name
             website
             image {
@@ -30,7 +35,20 @@ const Sponsors = () => {
   `);
 
   const sponsor_list = data?.allContentfulSiteSettings?.nodes[0]?.sponsors;
-  if (sponsor_list?.size <= 0) return;
+  // Filter out all sponsors tagged as "example" or "preview"
+  const blockTags = ['example', 'preview'];
+  const display_list = sponsor_list.filter(sponsor => {
+    const tags = sponsor?.metadata?.tags;
+    if (
+      blockTags?.length > 0 &&
+      (tags && blockTags.some((blockTag) => tags.some((t) => t.contentful_id === blockTag)))
+    ) {
+      return false;
+    } else {
+      return true;
+    }
+  });
+  if (display_list?.size <= 0) return;
 
   return (
     <Container>
@@ -39,7 +57,7 @@ const Sponsors = () => {
         <hr className={styles.divider} />
 
         <div className={styles.sponsorsWrapper}>
-          {sponsor_list?.map((sponsor) => (
+          {display_list?.map((sponsor) => (
             <Sponsor name={sponsor.name} website={sponsor.website} image={sponsor.image} />
           ))}
         </div>
