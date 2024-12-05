@@ -13,10 +13,8 @@ const CardBlog = ({ post, classes }) => {
 
   const wrapperClasses = classes ? `${classes} ${typeStyles.card}`
                                  : typeStyles.card;
-                                 
-  let plainTextIntro = documentToPlainTextString(
-    JSON.parse(post.intro?.raw)
-  );
+
+  let plainTextIntro = post.cardIntro || documentToPlainTextString(JSON.parse(post.intro?.raw));
   const maxIntroLength = 75;
   if (plainTextIntro.length > maxIntroLength) {
     plainTextIntro = plainTextIntro.slice(0, maxIntroLength - 1) + '...';
@@ -34,9 +32,10 @@ const CardBlog = ({ post, classes }) => {
         )}
         <div className={`${styles.content} ${typeStyles.content}`}>
           <h3 className={styles.title}>{post.shortTitle ? post.shortTitle : post.title}</h3>
-          {post.intro?.raw && (
-            <em>{plainTextIntro}</em>
-          )}
+          {plainTextIntro?.length > 0 && (
+              <em>{plainTextIntro}</em>
+            )
+          }
           <strong>Read more →</strong>
         </div>
       </Link>
