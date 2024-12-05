@@ -30,6 +30,29 @@ const WhoWeAreBanner = ({ content, image }) => {
   );
 };
 
+const FeaturedGridSection = ({ title, content, featuredItems }) => {
+  return (
+    <div id="services">
+      <Banner
+        type="cta"
+        title={title}
+        content={content}
+        usesRichtext={true}
+        bgColor="transparent"
+      />
+      <CardGrid
+        items={featuredItems}
+        slugPrefix="service"
+        type="page"
+        layout="wide"
+        padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
+        maxWidth="var(--size-max-width)"
+        bgColor="transparent"
+      />
+    </div>
+  );
+}
+
 const ContactBanner = ({ content }) => {
   if (!content) return;
   return (
@@ -108,6 +131,7 @@ const TEMPServices = () => {
 class RootIndex extends React.Component {
   render() {
     const homepage = get(this, 'props.data.contentfulHomepage');
+    const services = get(this, 'props.data.allContentfulBlogPost.nodes');
     const seo = homepage.seo;
 
     return (
@@ -130,11 +154,12 @@ class RootIndex extends React.Component {
         <IntroBanner content={homepage.ctaContent} />
         {/* THP - Who We Are Section */}
         <WhoWeAreBanner content={homepage.whoWeAreContent} image={homepage.whoWeAreImg} />
-        
         {/* THP - Services We Provide Section */}
-        {/* TODO: Three sections, title, description, link for each one? Or just link to services page? */}
-        {/* TODO: Services page? */}
-        <TEMPServices />
+        <FeaturedGridSection
+          title={homepage.featuredGridTitle}
+          content={homepage.featuredGridContent}
+          featuredItems={services}
+        />
 
         {/* THP - Contact Section */}
         <ContactBanner content={homepage.contactContent} />
@@ -198,6 +223,27 @@ export const pageQuery = graphql`
         img {
           url
         }
+      }
+    }
+    allContentfulBlogPost(
+      filter: {metadata: {tags: {elemMatch: {contentful_id: {in: "service"}}}}}
+      sort: {publishDate: DESC}
+    ) {
+      nodes {
+        title
+        slug
+        bannerImg {
+          img {
+            gatsbyImage(
+              layout: FULL_WIDTH
+              placeholder: DOMINANT_COLOR
+              width: 480
+              height: 270
+            )
+          }
+          alt
+        }
+        cardIntro
       }
     }
   }
