@@ -125,7 +125,6 @@ export const pageQuery = graphql`
           }
         }
         title
-        duration
         detailTags
         status
         location
@@ -146,7 +145,6 @@ export const pageQuery = graphql`
           status
         }
         childEvents {
-          duration
           times {
             bookingRequired
             costOption

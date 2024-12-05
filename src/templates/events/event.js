@@ -217,7 +217,6 @@ export const pageQuery = graphql`
       detailedLocation {
         detailedLocation
       }
-      duration
       detailTags
       addTypeMessages
       regions
@@ -248,7 +247,6 @@ export const pageQuery = graphql`
         title
         shortTitle
         detailTags
-        duration
         id
         intro {
           raw
