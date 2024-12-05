@@ -16,7 +16,14 @@ class LandingPageTemplate extends React.Component {
                              && documentToPlainTextString(JSON.parse(landingPage.content.raw));
 
     let landingListElem;
-    // TODO: Upgrade card grid to take tag sorting
+
+    // THP SITE: Check if the landing page should show "services".
+    //           If so, set the slug prefix to "service", not "blog"
+    let listServices = false;
+    if (landingPage.allowedTagIDs?.includes('service')) {
+      listServices = true;
+    }
+
     if (type === 'Events') {
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulEvent.nodes')}
@@ -27,9 +34,11 @@ class LandingPageTemplate extends React.Component {
                           blockTags={landingPage.blockedTagIDs}
                         />;
     } else if (type === 'Blog Posts') {
+      // THP SITE: Split blog posts from service posts
       landingListElem = <CardGrid
                           items={get(this.props, 'data.allContentfulBlogPost.nodes')}
-                          type="blog"
+                          slugPrefix={listServices ? 'service' : 'blog'}
+                          type={listServices ? 'service' : 'blog'}
                           maxWidth="var(--size-max-width)"
                           padding="var(--size-gutter)"
                           layout="wide"
