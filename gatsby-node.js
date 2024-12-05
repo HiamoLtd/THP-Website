@@ -164,7 +164,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPosts = await asyncGetContentfulPages(graphql, reporter, 'allContentfulBlogPost', 'publishDate: DESC');
 
   // Create blog posts pages, if there's at least one blog post found in Contentful
-  if (blogPosts === null) console.log('Error gathering blog posts. Skipping blog creation.');
+  if (!blogPosts) console.log('Error gathering blog posts. Skipping blog creation.');
   else if (blogPosts.length === 0) console.log('No blog posts found.');
   else if (blogPosts.length > 0) {
     console.log(`Creating ${blogPosts?.length} blog post pages...`);
@@ -198,7 +198,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   console.log('Gathering landing pages...');
   const landingPages = await asyncGetContentfulPages(graphql, reporter, 'allContentfulLandingPage');
 
-  if (landingPages === null) console.log('Error gathering landing pages. Skipping landing page creation.');
+  if (!landingPages) console.log('Error gathering landing pages. Skipping landing page creation.');
   else if (landingPages.length === 0) console.log('No landing pages found.');
   else if (landingPages.length > 0) {
     console.log(`Creating ${landingPages?.length} landing pages...`);
@@ -219,7 +219,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const basicPages = await asyncGetContentfulPages(graphql, reporter, 'allContentfulBasicPage');
 
   // Create basic pages, if there's at least one basic page found in Contentful
-  if (basicPages === null) console.log('Error gathering basic pages. Skipping basic page creation.');
+  if (!basicPages) console.log('Error gathering basic pages. Skipping basic page creation.');
   else if (basicPages.length === 0) console.log('No basic pages found.');
   else if (basicPages.length > 0) {
     console.log(`Creating ${basicPages?.length} basic pages...`);
@@ -235,7 +235,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Add redirects to Netlify's redirect file via gatsby-plugin-netlify
   const redirects = await asyncGetContentfulRedirects(graphql, reporter);
 
-  if (redirects === null) console.log('Error gathering redirects. Skipping redirect creation.');
+  if (!redirects) console.log('Error gathering redirects. Skipping redirect creation.');
   else if (redirects.length === 0) console.log('No redirects found.');
   else if (redirects.length > 0) {
     console.log(`Creating ${redirects?.length} redirects...`);
@@ -252,7 +252,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Add redirects to Netlify's redirect file via gatsby-plugin-netlify
   const fileLinks = await asyncGetContentfulFileLink(graphql, reporter);
 
-  if (fileLinks === null) console.log('Error gathering file links. Skipping File Link creation.');
+  if (!fileLinks) console.log('Error gathering file links. Skipping File Link creation.');
   else if (fileLinks.length === 0) console.log('No file links found.');
   else if (fileLinks.length > 0) {
     console.log(`Creating ${fileLinks?.length} file links...`);
