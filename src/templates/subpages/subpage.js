@@ -71,14 +71,13 @@ class SubpageTemplate extends React.Component {
               {/* THP: Link back to parent / landing page */}
               {/* TODO: Change with link to parent */}
               <nav>
-                <p>&nbsp;</p>
-                  <ul className={styles.articleNavigation}>
-                      <li>
-                        <Link to={`/services`}>
-                          ← View More Services
-                        </Link>
-                      </li>
-                  </ul>
+                <ul className={styles.articleNavigation}>
+                    <li>
+                      <Link to={`/services`}>
+                        ← View More Services
+                      </Link>
+                    </li>
+                </ul>
                 </nav>
             </div>
           </div>
