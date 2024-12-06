@@ -72,17 +72,12 @@
   margin-bottom: 0.5em;
 }
 
-.article ul,
-.article ol {
-  margin-bottom: 1.5em;
-}
-
 .article li {
   margin-bottom: 0.5em;
 }
 
 .article li p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1em;
 }
 
 .articleNavigation {
@@ -110,7 +105,7 @@
   }
 
   .article ul {
-    padding-left: 40px;
+    padding-left: 20px;
   }
   
   .article ol {

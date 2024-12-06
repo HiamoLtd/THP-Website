@@ -67,6 +67,10 @@
   margin-bottom: 0.5em;
 }
 
+.article li p {
+  margin-bottom: 1em;
+}
+
 .articleNavigation {
   display: flex;
   flex-wrap: wrap;
@@ -89,14 +93,6 @@
     padding-left: 0;
     padding-right: 0;
     width: calc(90% - var(--size-gutter));
-  }
-
-  .article ul {
-    padding-left: 5px;
-  }
-  
-  .article ol {
-    padding-left: 5px;
   }
 }
 
