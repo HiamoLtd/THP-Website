@@ -21,7 +21,7 @@
   overflow: clip;
   z-index: 1;
   position: relative;
-  width: 90%;
+  width: 100%;
 }
 
 .use-full-page-hero > .article {
@@ -98,6 +98,10 @@
 }
 
 @media (min-width: 768px) {
+  .container.use-full-page-hero {
+    width: 90%;
+  }
+
   .article {
     max-width: var(--size-max-width);
     margin: 0 auto;
