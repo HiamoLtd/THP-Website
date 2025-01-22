@@ -62,6 +62,7 @@ const ContactBanner = ({ content }) => {
       content={content}
       usesRichtext={true}
       bgColor="var(--secondary)"
+      id="contact"
     />
   );
 }
