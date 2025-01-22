@@ -131,3 +131,8 @@ blockquote {
   border-left: 4px solid var(--secondary);
   padding-left: 20px;
 }
+
+/* Adjust all anchor scroll points to account for the overlapping navbar */
+*[id] {
+  scroll-margin-top: var(--navbar-full-height);
+}
