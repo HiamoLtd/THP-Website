@@ -26,6 +26,7 @@ const WhoWeAreBanner = ({ content, image }) => {
       content={content}
       image={image}
       usesRichtext={true}
+      id="about"
     />
   );
 };
