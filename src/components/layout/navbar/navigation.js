@@ -44,6 +44,7 @@ const Navigation = () => {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about/' },
     { name: 'Services', path: '/#services' },
+    { name: 'Contact Us', path: '/#contact' },
   ];
 
   // TODO: Actually load nav items from admin
