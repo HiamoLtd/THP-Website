@@ -23,9 +23,9 @@ const Footer = () => (
           <Link to="/services/" className={styles.basicLink}>
             Services
           </Link>
-          {/* <a className={styles.contact} href="mailto:info@wellingtonheritageweek.co.nz" title="Email us">
-            info@wellingtonheritageweek.co.nz
-          </a> */}
+          <a className={styles.contact} href="mailto:info@theheritagepractice.co.nz" title="Email us">
+            info@theheritagepractice.co.nz
+          </a>
           <span className={styles.legal}>
             © The Heritage Practice Ltd.
             {' '}
