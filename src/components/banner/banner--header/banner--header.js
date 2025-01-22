@@ -5,11 +5,12 @@ import * as styles from './banner--header.module.css';
 const BannerHeader = ({
   title,
   images,
-  classes
+  classes,
+  id
 }) => {
   
   return (
-    <div>
+    <div id={id}>
       HEADER BANNER: {title}
     </div>
   )

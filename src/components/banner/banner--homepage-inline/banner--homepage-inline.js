@@ -8,9 +8,10 @@ import { Container } from '../../shared';
 const BannerHomepageInline = ({
   title,
   content,
-  image
+  image,
+  id
 }) => (
-  <div className={styles.container}>
+  <div className={styles.container} id={id}>
     {/* Full width banner image */}
     <div className={styles.imageWrapper}>
       <div

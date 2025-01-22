@@ -41,12 +41,13 @@ const BannerColumns = ({
   content,
   image,
   classes,
+  id,
   usesRichtext = true
 }) => {
   // TODO: Load image in for the right
 
   return (
-    <div className={`${styles.container} ${classes || ''}`}>
+    <div className={`${styles.container} ${classes || ''}`} id={id}>
       <Container bgColor="transparent" classes={`${styles.contentWrapper} ${styles.row}`}>
         <div className={`${styles.column} ${styles.columnPadded}`}>
           {title && (

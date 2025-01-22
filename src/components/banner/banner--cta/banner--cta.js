@@ -10,6 +10,7 @@ const BannerCTA = ({
   title,
   content,
   classes,
+  id,
   bgColor,
   usesRichtext = true
 }) => {
@@ -28,7 +29,7 @@ const BannerCTA = ({
   };
 
   return (
-    <div className={`${styles.container} ${classes || ''}`} style={{backgroundColor: bgColor || 'transparent'}}>
+    <div className={`${styles.container} ${classes || ''}`} style={{backgroundColor: bgColor || 'transparent'}} id={id}>
       {/* Content banner */}
       <Container bgColor="transparent" classes={styles.contentWrapper}>
         {title && (
