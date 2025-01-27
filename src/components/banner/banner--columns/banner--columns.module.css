@@ -16,13 +16,10 @@
   align-items: flex-start;
   align-items: stretch; 
   flex-direction: column-reverse;
-  /* gap: 20px; */
 }
 
 .column {
   flex: 1;
-  /* background-color: ; */
-  /* padding: var(--space-md) var(--space-lg); */
 }
 
 .column-padded {
@@ -45,7 +42,8 @@
   color: var(--primary);
   font-weight: 700;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.2;
+  margin-bottom: var(--space-3xl);
 }
 
 .container hr {
@@ -81,4 +79,12 @@ TODO: Maybe linking to entries when not inline should make buttons? */
 .container a:not([href^="mailto:"],[href^="ph:"]):focus {
   background: var(--primary);
   color: var(--secondary);
+}
+
+/* Tablet and Desktop styles, where the two columns separate */
+@media (min-width: 768px) {
+  .column-padded {
+    padding: var(--space-md) var(--size-gutter) var(--space-md) 0;
+    margin: auto;
+  }
 }
