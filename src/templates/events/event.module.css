@@ -1,6 +1,7 @@
 .container {
   background-color: white;
   overflow: clip;
+  margin: 0 0 var(--space-5xl) 0;
 }
 
 .meta {
