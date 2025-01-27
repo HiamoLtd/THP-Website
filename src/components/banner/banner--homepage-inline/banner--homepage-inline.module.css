@@ -29,20 +29,33 @@
 .content-outer-wrapper {
   text-align: center;
   flex-shrink: 0;
-  margin: var(--space-2xl) var(--size-gutter);
   width: auto;
 }
 
 .content-inner-wrapper {
   color: var(--dark);
-  padding: var(--space-2xl) var(--size-gutter);
-  border-radius: var(--radius-md);
+  padding: 0;
 }
 
 .title {
-  font-size: var(--text-title);
+  letter-spacing: -0.012em;
+  font-size: var(--text-homepage);
+  font-weight: var(--fw-extrabold);
+  line-height: var(--solid);
   margin: 0;
-  line-height: 1.1;
+  color: var(--text-light);
+  text-align: left;
+}
+
+.title > span {
+  background-color: var(--primary);
+  display: inline;
+  padding: 0;
+  line-height: 1.38;
+  -webkit-box-shadow: 0.8rem 0 0 var(--primary), -0.8rem 0 0 var(--primary);
+  box-shadow: 0.8rem 0 0 var(--primary), -0.8rem 0 0 var(--primary);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 .container hr  {

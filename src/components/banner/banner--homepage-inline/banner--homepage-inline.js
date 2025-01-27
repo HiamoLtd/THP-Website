@@ -18,9 +18,9 @@ const BannerHomepageInline = ({
         className={styles.image}
         style={{backgroundImage: `url(${image?.url})`}}
       >
-        <Container bgColor="transparent" classes={styles.contentOuterWrapper} padding="0 var(--size-gutter)">
-          <Container bgColor="var(--secondary)" classes={styles.contentInnerWrapper}>
-            <h1 className={styles.title}>{title}</h1>
+        <Container bgColor="transparent" classes={styles.contentOuterWrapper} padding="0px">
+          <Container bgColor="transparent" classes={styles.contentInnerWrapper} padding=" 0 var(--size-gutter)">
+            <h1 className={styles.title}><span>{title}</span></h1>
             {content && (
               <>
                 <hr />
