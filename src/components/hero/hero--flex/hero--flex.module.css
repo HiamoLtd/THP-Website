@@ -126,7 +126,7 @@
 }
 
 .landing .title {
-  margin: 0 0 var(--space-3xl);
+  margin: 0 0 var(--space-2xl);
   color: var(--primary);
 }
 
@@ -185,6 +185,10 @@
   .banner .image {
     width: 80%;
     margin: 1rem auto;
+  }
+
+  .landing .title {
+    margin: 0 0 var(--space-3xl);
   }
 }
 
