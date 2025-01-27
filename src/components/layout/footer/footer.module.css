@@ -22,6 +22,8 @@
 
 .text-column {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-column > * {
@@ -31,13 +33,14 @@
 .legal {
   font-size: var(--text-xs);
   display: block;
-  margin-bottom: 0;
+  margin: var(--space-3xl) 0 var(--space-2xl) 0;
 }
 
 .attribution {
   width: fit-content;
   display: block;
-  margin-top: 1rem;
+  margin-top: var(--space-2xl);
+  margin-bottom: 0;
 }
 
 .attribution a {
@@ -117,5 +120,9 @@
     justify-content: space-between;
     align-content: flex-end;
     align-items: flex-end;
+  }
+
+  .legal {
+    margin: var(--space-2xl) 0 0;
   }
 }
