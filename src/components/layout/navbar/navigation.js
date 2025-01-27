@@ -43,7 +43,7 @@ const Navigation = () => {
   let navItems = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about/' },
-    { name: 'Services', path: '/#services' },
+    { name: 'Services', path: '/services/' },
     { name: 'Contact Us', path: '/#contact' },
   ];
 
