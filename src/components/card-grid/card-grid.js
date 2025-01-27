@@ -49,6 +49,7 @@ const CardGrid = ({
   bgColor = "#F5F5F5",
   layout,
   padding,
+  margin,
   overflow,
   acceptTags,
   blockTags,
@@ -72,6 +73,7 @@ const CardGrid = ({
       bgColor={bgColor}
       maxWidth={maxWidth}
       padding={padding}
+      margin={margin}
       overflow={overflow}
     >
       <div className={gridClasses}>
