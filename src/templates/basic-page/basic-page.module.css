@@ -36,7 +36,9 @@
 }
 
 .intro {
-  font-weight: bold;
+  font-size: var(--text-lead);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-3xl);
 }
 
 .body {
