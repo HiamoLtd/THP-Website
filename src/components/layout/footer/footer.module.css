@@ -1,6 +1,6 @@
 .container {
   border-top: 1px solid var(--primary);
-  font-size: var(--text-md);
+  font-size: var(--text-sm);
   margin-top: var(--space-2xl);
   padding: var(--space-2xl) 0;
   text-align: center;
@@ -108,6 +108,10 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    font-size: var(--text-md);
+  }
+
   .row {
     flex-direction: row;
   }
