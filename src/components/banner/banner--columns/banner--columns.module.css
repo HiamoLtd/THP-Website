@@ -24,10 +24,6 @@
   flex: 1;
 }
 
-.column-padded {
-  margin: auto;
-}
-
 .column-image {
   border-radius: var(--radius-md);
 }
