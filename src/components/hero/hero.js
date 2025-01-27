@@ -12,12 +12,13 @@ const Hero = ({
   usesRichtext = true,
   type,
   status,
-  hardcodedImageUrl
+  hardcodedImageUrl,
+  variant
 }) => {
   {/* TODO: Remove hardcoded image */}
   switch (type) {
     case 'flex':
-      return <HeroFlex hardcodedImageUrl={hardcodedImageUrl} title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} />;
+      return <HeroFlex hardcodedImageUrl={hardcodedImageUrl} title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} variant={variant} />;
     case 'full-page':
       return <HeroFullPage hardcodedImageUrl={hardcodedImageUrl} title={title} content={content} image={image} altImage={altImage} usesRichtext={usesRichtext} status={status} />;
     default:
