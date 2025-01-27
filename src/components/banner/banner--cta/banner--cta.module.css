@@ -13,7 +13,7 @@
 
 .title,
 .content h2 {
-  font-size: var(--text-title);
+  font-size: var(--text-heading);
   color: var(--primary);
   font-weight: 700;
   margin: 0;

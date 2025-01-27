@@ -41,7 +41,7 @@
 
 .title,
 .content h2 {
-  font-size: var(--text-title);
+  font-size: var(--text-heading);
   color: var(--primary);
   font-weight: 700;
   margin: 0;
@@ -57,6 +57,7 @@
 .content {
   color: #212121;
   font-size: var(--text-lead);
+  font-weight: var(--fw-medium);
   margin: 0;
 }
 
