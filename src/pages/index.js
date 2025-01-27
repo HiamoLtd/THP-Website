@@ -13,6 +13,7 @@ const IntroBanner = ({ content }) => {
       content={content}
       usesRichtext={true}
       bgColor="var(--secondary)"
+      padding="var(--space-5xl) var(--size-gutter)"
     />
   );
 }
@@ -27,6 +28,7 @@ const WhoWeAreBanner = ({ content, image }) => {
       image={image}
       usesRichtext={true}
       id="about"
+      padding="var(--space-5xl) var(--size-gutter)"
     />
   );
 };
@@ -40,13 +42,15 @@ const FeaturedGridSection = ({ title, content, featuredItems }) => {
         content={content}
         usesRichtext={true}
         bgColor="transparent"
+        padding="var(--space-5xl) var(--size-gutter) var(--space-2xl)"
       />
       <CardGrid
         items={featuredItems}
         slugPrefix="service"
         type="page"
         layout="wide"
-        padding="var(--space-md) var(--size-gutter) var(--size-gutter)"
+        padding="0 var(--size-gutter) var(--space-5xl)"
+        margin="0 0 var(--space-2xl)"
         maxWidth="var(--size-max-width)"
         bgColor="transparent"
       />
@@ -59,11 +63,12 @@ const ContactBanner = ({ content }) => {
   return (
     <Banner
       type="cta"
-      title="CONTACT US"
+      title="Contact Us"
       content={content}
       usesRichtext={true}
-      bgColor="var(--secondary)"
+      bgColor="var(--background-light)"
       id="contact"
+      padding="var(--space-5xl) var(--size-gutter)"
     />
   );
 }
