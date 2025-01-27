@@ -27,7 +27,7 @@ html * {
 body {
   background: var(--background);
   color: var(--text-dark);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 16px;
   font-weight: var(--fw-body);
   /*
@@ -56,6 +56,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-heading);
   font-weight: var(--fw-semibold);
   line-height: var(--dense);
 }
