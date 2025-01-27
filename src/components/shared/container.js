@@ -6,6 +6,7 @@ const Container = ({
   bgColor = 'var(--white)',
   maxWidth = 'var(--size-max-width)',
   padding = 'var(--space-2xl) var(--size-gutter)',
+  margin = '0px',
   overflow = 'hidden',
   position = 'relative',
   classes = ''
@@ -19,6 +20,7 @@ const Container = ({
         width: '100%',
         overflow: overflow,
         padding: padding,
+        margin: margin,
         backgroundColor: bgColor,
         position: position
       }}
