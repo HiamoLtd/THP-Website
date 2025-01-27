@@ -11,10 +11,13 @@
 
 .row {
   display: flex;
+}
+
+.row > div:first-child {
   justify-content: space-between;
   align-items: flex-start;
   align-items: stretch; 
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 .column {
@@ -22,12 +25,10 @@
 }
 
 .column-padded {
-  /* padding: var(--space-md) var(--size-gutter); */
   margin: auto;
 }
 
 .column-image {
-  /* aspect-ratio: 16 / 9; */
   border-radius: var(--radius-md);
 }
 
@@ -42,7 +43,7 @@
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .container hr {
@@ -56,6 +57,10 @@
   font-size: var(--text-lead);
   font-weight: var(--fw-medium);
   margin: 0;
+}
+
+.column-padded .content {
+  padding-bottom: var(--space-2xl);
 }
 
 /* TODO: This applies to all links, even inline. Need to make a custom richtext render that doesn;t do this
@@ -82,8 +87,21 @@ TODO: Maybe linking to entries when not inline should make buttons? */
 
 /* Tablet and Desktop styles, where the two columns separate */
 @media (min-width: 768px) {
+  .row > div:first-child {
+    flex-direction: row;
+  }
+
   .column-padded {
     padding: var(--space-md) var(--size-gutter) var(--space-md) 0;
     margin: auto;
+  }
+  
+  .column-padded .content {
+    padding-bottom: 0;
+  }
+
+  .title,
+  .content h2 {
+    margin-bottom: var(--space-3xl);
   }
 }
