@@ -103,13 +103,6 @@
   :root {
     --text-homepage: var(--text-5xl);
     --size-gutter: var(--space-3xl);
-    --size-logo: 120px;
-
-    /* -------------------------- */
-    /* COMPONENT STYLE VARIABLES */
-    /* ------------------------ */
-    /* navigation component */
-    --navbar-inner-height: 50px;
   }
 }
 
@@ -121,5 +114,12 @@
     --text-homepage: var(--text-7xl);
     --text-prose-tracking: -0.014em;
     --text-prose: var(--text-xl);
+
+    /* -------------------------- */
+    /* COMPONENT STYLE VARIABLES */
+    /* ------------------------ */
+    /* navigation component */
+    --navbar-inner-height: 50px;
+    --size-logo: 120px;
   }
 }
