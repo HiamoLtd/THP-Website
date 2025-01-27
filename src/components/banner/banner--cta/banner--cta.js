@@ -36,7 +36,7 @@ const BannerCTA = ({
         {title && (
           <>
             <h2 className={styles.title}>{title}</h2>
-            {content && <hr />}
+            {/* {content && <hr />} */}
           </>
         )}
         {content && (
