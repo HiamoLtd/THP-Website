@@ -10,6 +10,7 @@ const BannerCTA = ({
   title,
   content,
   classes,
+  padding = "var(--space-3xl) var(--size-gutter)",
   id,
   bgColor,
   usesRichtext = true
@@ -31,7 +32,7 @@ const BannerCTA = ({
   return (
     <div className={`${styles.container} ${classes || ''}`} style={{backgroundColor: bgColor || 'transparent'}} id={id}>
       {/* Content banner */}
-      <Container bgColor="transparent" classes={styles.contentWrapper}>
+      <Container bgColor="transparent" classes={styles.contentWrapper} padding={padding}>
         {title && (
           <>
             <h2 className={styles.title}>{title}</h2>

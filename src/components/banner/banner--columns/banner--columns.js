@@ -41,14 +41,13 @@ const BannerColumns = ({
   content,
   image,
   classes,
+  padding = "var(--space-3xl) var(--size-gutter)",
   id,
   usesRichtext = true
 }) => {
-  // TODO: Load image in for the right
-
   return (
     <div className={`${styles.container} ${classes || ''}`} id={id}>
-      <Container bgColor="transparent" classes={`${styles.contentWrapper} ${styles.row}`}>
+      <Container bgColor="transparent" classes={`${styles.contentWrapper} ${styles.row}`} padding={padding}>
         <div className={`${styles.column} ${styles.columnPadded}`}>
           {title && (
             <>

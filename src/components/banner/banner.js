@@ -13,6 +13,7 @@ const Banner = ({
   content,
   image,
   classes,
+  padding,
   bgColor,
   id,
   usesRichtext = true
@@ -23,9 +24,9 @@ const Banner = ({
     case 'homepage-inline':
       return <BannerHomepageInline title={title} content={content} image={image} classes={classes} id={id} />;
     case 'cta':
-      return <BannerCTA title={title} content={content} classes={classes} id={id} bgColor={bgColor} usesRichtext={usesRichtext} />;
+      return <BannerCTA title={title} content={content} classes={classes} padding={padding} id={id} bgColor={bgColor} usesRichtext={usesRichtext} />;
     case 'columns':
-      return <BannerColumns title={title} content={content} image={image} classes={classes} id={id} usesRichtext={usesRichtext} />;
+      return <BannerColumns title={title} content={content} image={image} classes={classes} padding={padding} id={id} usesRichtext={usesRichtext} />;
     default:
       return <BannerHeader title={title} content={content} image={image} classes={classes} id={id} usesRichtext={usesRichtext} />;
   }
