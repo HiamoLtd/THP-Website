@@ -47,7 +47,7 @@
 .intro {
   font-size: var(--text-lead);
   font-weight: var(--fw-semibold);
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .body {
@@ -104,6 +104,10 @@
     max-width: var(--size-max-width);
     margin: 0 auto;
     gap: var(--space-xl);
+  }
+  
+  .intro {
+    margin-bottom: var(--space-3xl);
   }
 }
 
