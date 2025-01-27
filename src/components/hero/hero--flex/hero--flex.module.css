@@ -1,6 +1,6 @@
 .container {
   padding-top: var(--navbar-full-height);
-  background-color: var(--primary);
+  background-color: var(--secondary);
 }
 
 .hero {
@@ -119,6 +119,27 @@
   height: auto;
 }
 
+.landing {
+  color: var(--text-dark);
+  max-width: var(--size-max-width);
+  padding: var(--space-5xl) var(--size-gutter) 0;
+}
+
+.landing .title {
+  margin: 0 0 var(--space-3xl);
+  color: var(--primary);
+}
+
+.landing .content {
+  font-weight: var(--fw-medium);
+}
+
+.landing .details {
+  width: 100%;
+  padding: 0;
+  left: auto;
+}
+
 .headline .details {
   background: none;
 }
@@ -205,5 +226,9 @@
   .banner .image {
     right: var(--space-xl);
     margin: 0;
+  }
+
+  .landing {
+    padding: var(--space-5xl) 0 0;
   }
 }
