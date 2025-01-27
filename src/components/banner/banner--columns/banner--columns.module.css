@@ -100,4 +100,8 @@ TODO: Maybe linking to entries when not inline should make buttons? */
   .content h2 {
     margin-bottom: var(--space-3xl);
   }
+
+  .column-image {
+    margin: auto;
+  }
 }
