@@ -29,7 +29,8 @@ class LandingPageTemplate extends React.Component {
                           items={get(this.props, 'data.allContentfulEvent.nodes')}
                           type="events"
                           maxWidth="var(--size-max-width)"
-                          padding="var(--size-gutter)"
+                          padding="var(--space-2xl) var(--size-gutter) var(--space-5xl)"
+                          bgColor="var(--secondary)"
                           acceptTags={landingPage.allowedTagIDs}
                           blockTags={landingPage.blockedTagIDs}
                         />;
@@ -42,7 +43,8 @@ class LandingPageTemplate extends React.Component {
                           blockTags={landingPage.blockedTagIDs}
                           type={listServices ? 'service' : 'blog'}
                           maxWidth="var(--size-max-width)"
-                          padding="var(--size-gutter)"
+                          padding="var(--space-2xl) var(--size-gutter) var(--space-5xl)"
+                          bgColor="var(--secondary)"
                           layout="wide"
                         />;
     }
@@ -62,6 +64,7 @@ class LandingPageTemplate extends React.Component {
           title={landingPage.title}
           content={landingPage.content}
           type="flex"
+          variant="landing"
         />
         {landingPage.openTime ? (
           <Countdown
