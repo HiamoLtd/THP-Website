@@ -32,6 +32,8 @@
   --space-xl: 20px;
   --space-2xl: 24px;
   --space-3xl: 48px;
+  --space-4xl: 64px;
+  --space-5xl: 76px;
 
   /* line-height */
   --solid: 1;
@@ -75,6 +77,7 @@
   --text-lead: var(--text-lg);
   --text-prose: var(--text-md);
   --text-title: var(--text-3xl);
+  --text-heading: var(--text-2xl);
   /* tracking */
   --text-prose-tracking: -0.011em;
 
@@ -111,6 +114,7 @@
   :root {
     --text-lead: var(--text-2xl);
     --text-title: var(--text-6xl);
+    --text-heading: var(--text-5xl);
     --text-prose-tracking: -0.014em;
     --text-prose: var(--text-lg);
   }
