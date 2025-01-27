@@ -16,7 +16,7 @@
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .container hr {
@@ -52,4 +52,12 @@ TODO: Maybe linking to entries when not inline should make buttons? */
 .container a:not([href^="mailto:"],[href^="ph:"]):focus {
   background: var(--primary);
   color: var(--secondary);
+}
+
+/* Tablet and Desktop styles */
+@media (min-width: 768px) {
+  .title,
+  .content h2 {
+    margin-bottom: var(--space-3xl);
+  }
 }
