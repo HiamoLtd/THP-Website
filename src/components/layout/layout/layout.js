@@ -18,23 +18,14 @@ const SiteHead = () => (
 // Script module & template literals to wrap the JS
 const GoogleAnalytics = () => (
   <>
-    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EN4BXL6CWQ&l=defaultGtm"></Script>
+    <Script async src="https://www.googletagmanager.com/gtag/js?id=G-1WWZ3KS6KK"></Script>
     <Script>
       {`
-        window.defaultGtm = window.defaultGtm || [];
-        function gtag(){defaultGtm.push(arguments);}
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-EN4BXL6CWQ');
-      `}
-    </Script>
-    {/* TODO: Because Alex Hockley's google ads account is attached. Should not have two GTM tags usually. */}
-    <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-11349270605&l=advertGtm"></Script>
-    <Script>
-      {`
-        window.advertGtm = window.advertGtm || [];
-        function gtag(){advertGtm.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-11349270605');
+
+        gtag('config', 'G-1WWZ3KS6KK');
       `}
     </Script>
   </>
